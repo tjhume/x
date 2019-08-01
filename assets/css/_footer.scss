@@ -1,0 +1,167 @@
+$footer_text: #9A9CA0;
+$footer_background: #464F55;
+$social_media_background: #586065;
+
+footer {
+	width: 100%;
+	background-color: $footer_background;
+	overflow: auto;
+	h3 {
+		font-weight: 600;
+		color: white;
+		font-size: 14px;
+	}
+	ul {
+		font-size: 0;
+		padding: 0;
+	}
+	li {
+		font-size: 14px;
+		color: $footer_text;
+		margin-top: 10px;
+		list-style-type: none;
+	}
+	p {
+		font-size: 14px;
+		color: $footer_text;
+		margin-top: 10px;
+		span {
+			color: white;
+		}
+	}
+}
+#footer-row {
+	width: 1400px;
+	margin: auto;
+	padding-top: 75px;
+	overflow: auto;
+}
+.footer-box {
+	float: left;
+	width: 16.66%;
+}
+.footer-box-lg {
+	float: left;
+	width: 25%;
+}
+#sheepbuy-desc {
+	padding-right: 60px;
+}
+.logo-white {
+	height: 18px;
+}
+#footer-social-row {
+	margin-top: 10px;
+	div {
+		position: relative;
+		float: left;
+		background-color: $social_media_background;
+		width: 48px;
+		height: 54px;
+		background-size: auto 18px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		margin-right: 20px;
+		&:nth-last-child(1) {
+			margin-right: 0;
+		}
+	}
+	a {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+#footer-fb {
+	background-image: url("../img/fb-icon.png");
+}
+#footer-insta {
+	background-image: url("../img/insta-icon.png");
+}
+#footer-twitter {
+	background-image: url("../img/twitter-icon.png");
+}
+#footer-terms {
+	margin-top: 50px;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 30px;
+	span {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}
+@media only screen and (max-width:1510px) {
+	#footer-row {
+		width: 900px;
+	}
+}
+@media only screen and (max-width:965px) {
+	#footer-row {
+		padding-top: 30px;
+	}
+}
+@media only screen and (max-width:910px) {
+	.f-mobile-hidden {
+		display: none;
+	}
+	#sheepbuy-desc {
+		margin-bottom: 40px;
+	}
+	#footer-row {
+		width: 100%;
+		overflow: hidden;
+	}
+	.footer-box-lg {
+		padding-left: 20px;
+		padding-right: 20px;
+		float: none;
+		clear: both;
+		width: 100%;
+		margin: auto;
+		&:nth-last-child(1) {
+			padding-left: 0;
+		}
+	}
+	.footer-box {
+		padding-left: 20px;
+		padding-right: 20px;
+		width: 30%;
+		padding: 0;
+		margin-bottom: 20px;
+	}
+	#footer-box-wrapper {
+		margin: auto;
+		padding-left: 20px;
+	}
+	#footer-social-row {
+		width: 184px;
+		margin: auto;
+		padding-top: 20px;
+	}
+}
+@media only screen and (max-width:485px) {
+	footer {
+		li {
+			font-size: 12px;
+		}
+		h3 {
+			font-size: 12px;
+		}
+		p {
+			font-size: 12px;
+		}
+	}
+	#sheepbuy-desc {
+		font-size: 12px;
+	}
+	.footer-box {
+		width: 50%;
+		&:nth-last-child(1) {
+			float: none;
+			clear: both;
+		}
+	}
+}
