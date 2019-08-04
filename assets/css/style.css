@@ -647,9 +647,9 @@ footer {
     font-size: 20px; }
   h2, .product-price {
     font-size: 16px; }
-  .search-input input {
+  .search-input {
     width: 250px; }
-    .search-input input input {
+    .search-input input {
       font-size: 14px; }
   #start-selling {
     font-size: 14px;
