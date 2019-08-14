@@ -24,6 +24,8 @@ $select_arrow_border: transparent transparent #D8D9DB transparent;
 
 @import 'global';
 @import 'footer';
+@import 'results';
+@import 'product-details';
 
 /* === LOGIN SECTION === */
 .login {
@@ -536,7 +538,7 @@ $select_arrow_border: transparent transparent #D8D9DB transparent;
 	h2, .product-price {
 		font-size: 16px;
 	}
-	.search-input input,  {
+	.search-input {
 		input {
 			font-size: 14px;
 		}
