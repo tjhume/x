@@ -291,7 +291,7 @@ $select_arrow_border: transparent transparent #D8D9DB transparent;
 	background-image: url("../img/sample-product2.jpg");
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
-	background-size: cover;
+	background-size: contain;
 	border-radius: 10px;
 	overflow: hidden;
 }

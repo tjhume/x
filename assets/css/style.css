@@ -570,11 +570,11 @@ footer {
     margin-bottom: 30px;
     border-radius: 10px; }
     .details-content .details-carousel .details-carousel-img {
-      width: 675px;
-      height: 420px;
+      width: 100%;
+      height: 100%;
       background-image: url("../img/sample-product2.jpg");
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: contain;
       background-position: center center;
       border-radius: 10px; }
     .details-content .details-carousel .slick-prev {
@@ -805,9 +805,6 @@ footer {
 @media only screen and (max-width: 1510px) {
   .details-content .details-carousel {
     height: 385px; }
-    .details-content .details-carousel .details-carousel-img {
-      width: 428px;
-      height: 385px; }
   .details-content .details-details {
     height: 385px; }
     .details-content .details-details .details-title {
@@ -854,8 +851,6 @@ footer {
     margin: auto;
     margin-bottom: 20px;
     width: 440px; }
-    .details-content .details-carousel .details-carousel-img {
-      width: 440px; }
   .details-content .details-details {
     float: none;
     clear: both;
@@ -983,9 +978,6 @@ footer {
   .details-content .details-carousel {
     width: 310px;
     height: 310px; }
-    .details-content .details-carousel .details-carousel-img {
-      width: 310px;
-      height: 310px; }
   .details-content .details-details {
     width: 310px; }
     .details-content .details-details .details-title {
@@ -1279,7 +1271,7 @@ footer {
   background-image: url("../img/sample-product2.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: cover;
+  background-size: contain;
   border-radius: 10px;
   overflow: hidden; }
 
