@@ -941,6 +941,8 @@ footer {
       margin-right: 20px; }
       .details-product-row .product-item:nth-last-child(1) {
         margin-right: 0; }
+      .details-product-row .product-item .product-img {
+        width: auto; }
       .details-product-row .product-item .product-title {
         font-size: 14px;
         padding-top: 5px;
