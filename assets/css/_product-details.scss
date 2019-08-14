@@ -105,8 +105,8 @@ $sidebar_oval: #D5D5D8;
 		margin-bottom: 30px;
 		border-radius: 10px;
 		.details-carousel-img{
-			width: 100%;
-			height: 100%;
+			width: 675px;
+			height: 420px;
 			background-image: url("../img/sample-product2.jpg");
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -394,6 +394,10 @@ $sidebar_oval: #D5D5D8;
 	.details-content{
 		.details-carousel{
 			height: 385px;
+			.details-carousel-img{
+				width: 428px;
+				height: 385px;
+			}
 		}
 		.details-details{
 			height: 385px;
@@ -467,6 +471,9 @@ $sidebar_oval: #D5D5D8;
 			margin: auto;
 			margin-bottom: 20px;
 			width: 440px;
+			.details-carousel-img{
+				width: 440px;
+			}
 		}
 		.details-details{
 			float: none;
@@ -633,6 +640,10 @@ $sidebar_oval: #D5D5D8;
 		.details-carousel{
 			width: 310px;
 			height: 310px;
+			.details-carousel-img{
+				width: 310px;
+				height: 310px;
+			}
 		}
 		.details-details{
 			width: 310px;
