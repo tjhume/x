@@ -25,6 +25,8 @@ $select_arrow_border: transparent transparent #D8D9DB transparent;
 /* Results-Specific */
 $sidebar_oval: #D5D5D8;
 
+@import 'style';
+
 /* === RESULTS SECTION === */
 
 /* Can be moved to style.scss */
@@ -216,6 +218,9 @@ $sidebar_oval: #D5D5D8;
 	.product-item{
 		width: 342px;
 		margin-right: 44px;
+		&:nth-last-child(1){
+			margin-right: 0;
+		}
 	}
 	
 	.product-row{
