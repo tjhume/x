@@ -1,0 +1,711 @@
+/* Colors */
+$dark: #161616;
+$sheep_blue: #44AAED;
+$heading_color: #464855;
+$item_category_text: #898EA2;
+$product_shipping_text: #7C7D81;
+$description_text: #90929D;
+$package_title_text: #3DA7ED;
+$package_price_text: #353535;
+$package_details_text: #363636;
+$search_category_gray: #F6F7F7;
+$search_category_highlight: rgba(0, 0, 0, 0.1);
+$search_magnifier_background: #ECF6FD;
+$products_packages_containers_background: #F5F6F8;
+$browse_more_background: #EBF1F7;
+
+/* Fonts */
+$nunito: Nunito, Arial, sans-serif;
+$montserrat: Montserrat, Arial, sans-serif;
+
+/* Borders */
+$select_box_border: #D8D9DB transparent transparent transparent;
+$select_arrow_border: transparent transparent #D8D9DB transparent;
+
+@import 'style.scss';
+
+/* === MY PROFILE === */
+
+/* Same styles as product-container in style.scss. Can be put together and given the same name */
+#profile-container {
+	width: 100%;
+	padding-bottom: 50px;
+	background-color: $products_packages_containers_background;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.desktop-hidden-750{
+	display: none;
+}
+
+/* Could be moved (along with #mobile-login-register below) to style.scss. Probably add a class like "logged-in" for when the user is logged in and add these specific styles with &.logged-in{} in style.scss */
+#login-register, #mobile-login-register{
+	position: relative;
+	span{
+		font-weight: bold;
+		margin-left: 0px;
+		margin-right: 0px;
+		a{
+			font-weight: normal;
+			color: $sheep_blue;
+			margin-left: 20px;
+			margin-right: 22px;
+		}
+	}
+	img{
+		height: 15px;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+#mobile-login-register{
+	span{
+		a{
+			font-weight: 600;
+			margin-right: 16px;
+			font-size: 14px;
+		}
+	}
+	img{
+		top: 6px;
+		right: 10px;
+	}
+}
+
+/* Similar to #products in style.scss, but with different padding. Could probably make these the same and change spacing a different, page-specific element */
+#profile{
+	width: 1500px;
+	margin: auto;
+	padding-top: 20px;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.verify-email-banner{
+	padding: 5px;
+	width: 100%;
+	background-color: rgba(61,167,237,0.11);
+	box-shadow: 1px 0 0 0 #FFFFFF;
+	border-radius: 4px;
+	height: 40px;
+	line-height: 40px;
+	color: $heading_color;
+	font-weight: 600;
+	font-size: 12px;
+	text-align: center;
+	margin-bottom: 30px;
+	a{
+		color: $sheep_blue;
+	}
+}
+
+.profile-left{
+	float: left;
+	margin-right: 20px;
+	width: 300px;
+}
+
+.profile-right{
+	float: right;
+	width: 1180px;
+}
+
+/* Sidebar has similar sizing to results sidebar, so these general styles could be combined in style.scss */
+.profile-sidebar{
+	width: 100%;
+	margin-right: 44px;
+	background-color: white;
+	border-radius: 10px;
+	color: $heading_color;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 14px;
+	font-weight: 600;
+	box-shadow: 0 2px 6px 0 rgba(69,73,91,0.08);
+	margin-bottom: 20px;
+	div{
+		width: 120px;
+		padding-left: 40px;
+		height: 40px;
+		line-height: 40px;
+		font-weight: 600;
+		color: $heading_color;
+		position: relative;
+		a{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 5;
+		}
+		img{
+			position: absolute;
+			top: 12px;
+			left: 12px;
+			height: 16px;
+		}
+		&.active{
+			background-color: rgba(68, 170, 237, 0.08);
+			color: $sheep_blue;
+			border-radius: 0px 20px 20px 0px;
+			border-left: 3px solid $sheep_blue;
+			img{
+				left: 9px;
+			}
+		}
+		&:nth-last-child(1){
+			margin-top: 152px;
+		}
+	}
+}
+
+.profile-ad{
+	width: 100%;
+	height: 250px;
+	background-color: silver;
+}
+
+/* Can be moved to style.scss with more generic name */
+.feedback-header{
+	height: 30px;
+	line-height: 30px;
+	margin-bottom: 10px;
+	h1{
+		font-weight: 600;
+		color: $heading_color;
+		float: left;
+		margin-right: 30px;
+		font-size: 22px;
+	}
+}
+
+/* The general profile-box settings could be moved to style.scss */
+.profile-box{
+	width: 1140px;
+	background-color: white;
+	overflow: auto;
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 6px 0 rgba(69,73,91,0.08);
+	border-radius: 10px;
+	h1, h2, h3{
+		font-weight: 600;
+		color: $heading_color;
+	}
+	h1{
+		font-size: 22px;
+	}
+	h2{
+		font-size: 16px;
+	}
+	h3{
+		font-size: 12px;
+	}
+	&.feedback{
+		color: $heading_color;
+		h1{
+			font-size: 20px;
+			font-weight: bold;
+		}
+		h2{
+			font-size: 18px;
+			font-weight: bold;
+		}
+		h3{
+			font-size: 16px;
+			font-weight: bold;
+		}
+		
+		/* Some similar styles to same class in purchases.scss NOTE: Bottom margin is different than order-details */
+		.purchased-item-box{
+			float: none;
+			clear: both;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			margin-bottom: 40px;
+			overflow: auto;
+			background-color: $search_category_gray;
+			position: relative;
+			h2{
+				margin-bottom: 10px;
+			}
+			p{
+				font-size: 14px;
+				font-weight: bold;
+				margin-top: 0;
+				margin-bottom: 5px;
+				span{
+					font-weight: 300;
+				}
+			}
+			.item-img{
+				margin-left: 20px;
+				float: left;
+				background-image: url("../img/sample-product2.jpg");
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+				width: 151px;
+				height: 138px;
+				border-radius: 10px;
+			}
+			.item-info{
+				float: left;
+				margin-left: 20px;
+			}
+			.item-date{
+				position: absolute;
+				top: 23px;
+				right: 20px;
+			}
+		}
+		.rate-transaction{
+			h2{
+				margin-bottom: 10px;
+			}
+			/* The container */
+			.container {
+				display: block;
+				position: relative;
+				padding-left: 35px;
+				line-height: 23px;
+				cursor: pointer;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				float: left;
+				margin-right: 35px;
+				font-size: 14px;
+				font-weight: 600;
+				margin-bottom: 20px;
+			}
+
+			/* Hide the browser's default radio button */
+			.container input {
+				position: absolute;
+				opacity: 0;
+				top: 0;
+				left: 0;
+				width: 23px;
+				height: 23px;
+				margin: 0;
+				cursor: pointer;
+			}
+
+			/* Create a custom radio button */
+			.checkmark {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 21px;
+				width: 21px;
+				background-color: white;
+				border: 1px solid #D5D5D8;
+				border-radius: 21px;
+			}
+
+			/* On mouse-over, add a grey background color */
+			.container:hover input ~ .checkmark {
+				background-color: #E1EDF7;
+			}
+
+			/* When the radio button is checked, add a blue background */
+			.container input:checked ~ .checkmark {
+				background-color: $sheep_blue;
+			}
+
+			/* Create the indicator (the dot/circle - hidden when not checked) */
+			.checkmark:after {
+				content: "\2713";
+				position: absolute;
+				display: none;
+			}
+
+			/* Show the indicator (dot/circle) when checked */
+			.container input:checked ~ .checkmark:after {
+				display: block;
+			}
+
+			/* Style the indicator (dot/circle) */
+			.container .checkmark:after {
+				font-size: 14px;
+				font-weight: bold;
+				top: 0;
+				left: 5px;
+				color: white;
+			}
+		}
+		.tell-more{
+			float: none;
+			clear: both;
+			margin-bottom: 20px;
+			overflow: auto;
+			h2{
+				margin-bottom: 10px;
+			}
+			input{
+				width: 100%;
+				font-family: $montserrat;
+				font-size: 14px;
+				height: 36px;
+				line-height: 36px;
+				border: 1px solid #ECECED;
+				border-radius: 4px;
+				box-shadow: 0 2px 1px 0 rgba(0,0,0,0.03);
+				padding-left: 10px;
+				margin-bottom: 10px;
+				&:focus{
+					outline: none;
+				}
+				&::placeholder{
+					color: #A3A4AB;
+				}
+			}
+			.characters-remaining{
+				float: right;
+				font-size: 12px;
+				font-weight: 300;
+				.characters{
+					font-weight: 600;
+				}
+			}
+		}
+		.rate-details{
+			h2{
+				margin-bottom: 20px;
+			}
+			.rate-row{
+				height: 20px;
+				line-height: 20px;
+				font-size: 14px;
+				font-weight: 300;
+				position: relative;
+				margin-bottom: 20px;
+				&:nth-last-child(1){
+					margin-bottom: 40px;
+				}
+				.rate-stars{
+					position: absolute;
+					top: 0;
+					left: 430px;
+					.filled-star, .empty-star{
+						background-size: cover;
+						background-repeat: no-repeat;
+						background-position: center center;
+						width: 20px;
+						height: 20px;
+						float: left;
+						margin-right: 5px;
+						cursor: pointer;
+						&:nth-last-child(1){
+							margin-right: 0;
+						}
+					}
+					.filled-star{
+						background-image: url('../img/feedback-star.png');
+					}
+					.empty-star{
+						background-image: url('../img/feedback-star-empty.png');
+					}
+				}
+			}
+		}
+		.submit-feedback{
+		height: 50px;
+		line-height: 50px;
+		font-weight: 300;
+			.edit-notification{
+				float: left;
+				font-size: 12px;
+			}
+			.cancel-submit{
+				float: right;
+				a{
+					font-size: 14px;
+				}
+				input{
+					padding: 0;
+					margin-left: 30px;
+					height: 50px;
+					width: 230px;
+					color: white;
+					background-color: $sheep_blue;
+					border-radius: 4px;
+					font-size: 16px;
+					font-weight: 600;
+					font-family: $montserrat;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+/* === Mobile Styles === */
+
+/* Uses similar styles to #products-header {li{}} in style.scss. A lot of styles could be combined */
+.profile-options-slick{
+	margin-bottom: 20px;
+	overflow: hidden;
+	.slick-slide {
+		margin-left: 0px;
+	}
+	.slick-list {
+		margin-left: 20px;
+	}
+	.slick-arrow {
+		display: none !important;
+	}
+	li {
+		list-style-type: none;
+		display: inline-block;
+		padding-left: 7px;
+		padding-right: 7px;
+		text-align: center;
+		border-bottom: 1px solid #dbdbdb;
+		padding-bottom: 10px;
+		font-size: 16px;
+		transition: border-color 0.5s;
+		img{
+			height: 16px;
+			margin-right: 10px;
+			display: inline-block;
+		}
+		&:hover {
+			border-color: $sheep_blue;
+			border-width: 3px;
+			padding-bottom: 9px;
+		}
+	}
+}
+
+.log-out-mobile{
+	height: 60px;
+	line-height: 60px;
+	width: 100%;
+	background-color: #ECECED;
+	color: $heading_color;
+	text-align: center;
+	font-weight: 600;
+	position: relative;
+	img{
+		height: 16px;
+		margin-right: 20px;
+	}
+	a{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/* === MEDIA QUERIES === */
+@media only screen and (max-width:1510px) {
+	#profile{
+		width: 950px;
+	}
+	.profile-left{
+		width: 190px;
+	}
+	.profile-ad{
+		height: 158px;
+	}
+	
+	.profile-right{
+		width: 740px;
+	}
+	.profile-box{
+		width: 700px;
+	}
+}
+
+@media only screen and (max-width:965px) {
+	#profile{
+		width: 100%;
+	}
+	
+	.verify-email-banner{
+		width: 740px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.profile-right{
+		clear: both;
+		float: none;
+		margin: auto;
+	}
+}
+
+@media only screen and (max-width:750px) {
+	.mobile-hidden-750 {
+		display: none;
+	}
+	.desktop-hidden-750 {
+		display: block;
+	}
+	.verify-email-banner{
+		line-height: normal;
+		width: 410px;
+		height: 60px;
+		display: table;
+		span{
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+	.profile-right{
+		width: 450px;
+	}
+	.profile-box{
+		width: 410px;
+		&.feedback{
+			.purchased-item-box{
+				.img-info-wrapper{
+					overflow-y: auto;
+					margin-bottom: 20px;
+					width: 90%;
+					padding-left: 5%;
+					padding-right: 5%;
+				}
+				.item-img{
+					width: 78px;
+					height: 71px;
+					margin: 0;
+				}
+				.item-info{
+					width: 73%;
+				}
+				h2{
+					margin-bottom: 5px;
+				}
+				.item-date{
+					position: static;
+					float: none;
+				}
+			}
+			.rate-transaction{
+				.container{
+					margin-bottom: 30px;
+				}
+			}
+			.tell-more{
+				margin-bottom: 30px;
+			}
+			.rate-details{
+				.rate-row{
+					height: auto;
+					line-height: normal;
+					overflow: auto;
+					&:nth-last-child(1){
+						margin-bottom: 30px;
+					}
+					.rate-stars{
+						overflow: auto;
+						position: static;
+						margin-top: 5px;
+					}
+				}
+			}
+			.submit-feedback{
+				height: auto;
+				.edit-notification{
+					float: none;
+					text-align: center;
+				}
+				.cancel-submit{
+					float: none;
+					width: 312px;
+					margin: auto;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:460px) {
+	.profile-options-slick{
+		.slick-list{
+			margin-left: 0;
+		}
+	}
+	.verify-email-banner{
+		width: 90%;
+		height: 75px;
+	}
+	.purchases-header{
+		margin-left: 8px;
+	}
+	.profile-right{
+		width: 100%;
+	}
+	.profile-box{
+		&.feedback{
+			overflow-x: hidden;
+			border-radius: 0;
+			padding: 5%;
+			width: 90%;
+			.purchased-item-box{
+				background-color: white;
+				margin-bottom: 0;
+				padding-bottom: 0;
+				.item-info{
+					width: 65%;
+				}
+			}
+			.rate-transaction{
+				padding-top: 20px;
+				.container{
+					padding-left: 28px;
+					margin-right: 12px;
+					font-size: 12px;
+				}
+			}
+			.rate-details{
+				.rate-row{
+					font-weight: 600;
+				}
+			}
+			.submit-feedback{
+				.edit-notification{
+					font-size: 10px;
+					font-weight: 400;
+				}
+				.cancel-submit{
+					width: 282px;
+					input{
+						width: 200px;
+					}
+				}
+			}
+		}
+	}
+	.log-out-mobile{
+		width: 90%;
+		margin: auto;
+	}
+	.feedback-mobile-divider{
+		background-color: #F5F6F8;
+		width: 200%;
+		height: 20px;
+		margin-left: -50px;
+	}
+}
+
+@media only screen and (max-width:370px) {
+	.profile-box{
+		&.feedback{
+			.purchased-item-box{
+				.item-info{
+					width: 58%;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,585 @@
+/* Colors */
+$dark: #161616;
+$sheep_blue: #44AAED;
+$heading_color: #464855;
+$item_category_text: #898EA2;
+$product_shipping_text: #7C7D81;
+$description_text: #90929D;
+$package_title_text: #3DA7ED;
+$package_price_text: #353535;
+$package_details_text: #363636;
+$search_category_gray: #F6F7F7;
+$search_category_highlight: rgba(0, 0, 0, 0.1);
+$search_magnifier_background: #ECF6FD;
+$products_packages_containers_background: #F5F6F8;
+$browse_more_background: #EBF1F7;
+
+/* Fonts */
+$nunito: Nunito, Arial, sans-serif;
+$montserrat: Montserrat, Arial, sans-serif;
+
+/* Borders */
+$select_box_border: #D8D9DB transparent transparent transparent;
+$select_arrow_border: transparent transparent #D8D9DB transparent;
+
+@import 'style.scss';
+
+/* === MY PROFILE === */
+
+/* Same styles as product-container in style.scss. Can be put together and given the same name */
+#profile-container {
+	width: 100%;
+	padding-bottom: 50px;
+	background-color: $products_packages_containers_background;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+/* Could be moved (along with #mobile-login-register below) to style.scss. Probably add a class like "logged-in" for when the user is logged in and add these specific styles with &.logged-in{} in style.scss */
+#login-register, #mobile-login-register{
+	position: relative;
+	span{
+		font-weight: bold;
+		margin-left: 0px;
+		margin-right: 0px;
+		a{
+			font-weight: normal;
+			color: $sheep_blue;
+			margin-left: 20px;
+			margin-right: 22px;
+		}
+	}
+	img{
+		height: 15px;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+#mobile-login-register{
+	span{
+		a{
+			font-weight: 600;
+			margin-right: 16px;
+			font-size: 14px;
+		}
+	}
+	img{
+		top: 6px;
+		right: 10px;
+	}
+}
+
+/* Similar to #products in style.scss, but with different padding. Could probably make these the same and change spacing a different, page-specific element */
+#profile{
+	width: 1500px;
+	margin: auto;
+	padding-top: 20px;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.verify-email-banner{
+	padding: 5px;
+	width: 100%;
+	background-color: rgba(61,167,237,0.11);
+	box-shadow: 1px 0 0 0 #FFFFFF;
+	border-radius: 4px;
+	height: 40px;
+	line-height: 40px;
+	color: $heading_color;
+	font-weight: 600;
+	font-size: 12px;
+	text-align: center;
+	margin-bottom: 30px;
+	a{
+		color: $sheep_blue;
+	}
+}
+
+.profile-left{
+	float: left;
+	margin-right: 20px;
+	width: 300px;
+}
+
+.profile-right{
+	float: right;
+	width: 1180px;
+}
+
+/* Sidebar has similar sizing to results sidebar, so these general styles could be combined in style.scss */
+.profile-sidebar{
+	width: 100%;
+	margin-right: 44px;
+	background-color: white;
+	border-radius: 10px;
+	color: $heading_color;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 14px;
+	font-weight: 600;
+	box-shadow: 0 2px 6px 0 rgba(69,73,91,0.08);
+	margin-bottom: 20px;
+	div{
+		width: 120px;
+		padding-left: 40px;
+		height: 40px;
+		line-height: 40px;
+		font-weight: 600;
+		color: $heading_color;
+		position: relative;
+		a{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 5;
+		}
+		img{
+			position: absolute;
+			top: 12px;
+			left: 12px;
+			height: 16px;
+		}
+		&.active{
+			background-color: rgba(68, 170, 237, 0.08);
+			color: $sheep_blue;
+			border-radius: 0px 20px 20px 0px;
+			border-left: 3px solid $sheep_blue;
+			img{
+				left: 9px;
+			}
+		}
+		&:nth-last-child(1){
+			margin-top: 152px;
+		}
+	}
+}
+
+.profile-ad{
+	width: 100%;
+	height: 250px;
+	background-color: silver;
+}
+
+/* Can be moved to style.scss with more generic name */
+.purchases-header{
+	height: 30px;
+	line-height: 30px;
+	margin-bottom: 10px;
+	h1{
+		font-weight: 600;
+		color: $heading_color;
+		float: left;
+		margin-right: 30px;
+		font-size: 22px;
+	}
+}
+
+/* The general profile-box settings could be moved to style.scss */
+.profile-box{
+	width: 1140px;
+	background-color: white;
+	overflow: auto;
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 6px 0 rgba(69,73,91,0.08);
+	border-radius: 10px;
+	h1, h2, h3{
+		font-weight: 600;
+		color: $heading_color;
+	}
+	h1{
+		font-size: 22px;
+	}
+	h2{
+		font-size: 16px;
+	}
+	h3{
+		font-size: 12px;
+	}
+	&.order-details{
+		color: $heading_color;
+		h1{
+			font-size: 20px;
+			font-weight: bold;
+		}
+		h2{
+			font-size: 18px;
+			font-weight: bold;
+		}
+		h3{
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.order-number, .order-date{
+			font-size: 14px;
+			font-weight: bold;
+			margin-bottom: 20px;
+			span{
+				font-weight: 300;
+			}
+		}
+		.order-number{
+			float: left;
+		}
+		.order-date{
+			float: right;
+		}
+		.float-clear{
+			float: none;
+			clear: both;
+		}
+		.order-box{
+			border: 1px solid #D5D5D8;
+			border-radius: 6px;
+			width: 48%;
+			height: 135px;
+			margin-bottom: 20px;
+			h3{
+				padding-left: 10px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+			p{
+				font-weight: 500;
+				margin-top: 0;
+				margin-bottom: 0;
+				font-size: 14px;
+				padding-left: 10px;
+			}
+			.divider{
+				width: 98%;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 10px;
+			}
+			&.left{
+				float: left;
+			}
+			&.right{
+				float: right;
+			}
+		}
+		
+		/* Some similar styles to same class in purchases.scss */
+		.purchased-item-box{
+			float: none;
+			clear: both;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+			overflow: auto;
+			background-color: $search_category_gray;
+			position: relative;
+			h2{
+				margin-bottom: 10px;
+			}
+			p{
+				font-size: 14px;
+				font-weight: bold;
+				margin-top: 0;
+				margin-bottom: 5px;
+				span{
+					font-weight: 300;
+				}
+			}
+			.item-img{
+				margin-left: 20px;
+				float: left;
+				background-image: url("../img/sample-product2.jpg");
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+				width: 151px;
+				height: 138px;
+				border-radius: 10px;
+			}
+			.item-info{
+				float: left;
+				margin-left: 20px;
+			}
+			.item-cost{
+				width: 150px;
+				float: right;
+				margin-right: 40px;
+				p{
+					width: 100%;
+					margin-bottom: 8px;
+					position: relative;
+					span{
+						position: absolute;
+						top: 0;
+						right: 0;
+						font-weight: normal;
+					}
+				}
+				h2{
+					width: 100%;
+					position: relative;
+					span{
+						position: absolute;
+						top: 0;
+						right: 0;
+					}
+				}
+				.divider{
+					margin-top: 10px;
+					margin-bottom: 10px;
+				}
+			}
+		}
+		.description-box{
+			width: 100%;
+			border: 1px solid #D5D5D8;
+			border-radius: 8px;
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+			h1{
+				padding-top: 20px;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			p{
+				font-weight: 300;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		}
+	}
+}
+
+/* === Mobile Styles === */
+
+/* Uses similar styles to #products-header {li{}} in style.scss. A lot of styles could be combined */
+.profile-options-slick{
+	margin-bottom: 20px;
+	overflow: hidden;
+	.slick-slide {
+		margin-left: 0px;
+	}
+	.slick-list {
+		margin-left: 20px;
+	}
+	.slick-arrow {
+		display: none !important;
+	}
+	li {
+		list-style-type: none;
+		display: inline-block;
+		padding-left: 7px;
+		padding-right: 7px;
+		text-align: center;
+		border-bottom: 1px solid #dbdbdb;
+		padding-bottom: 10px;
+		font-size: 16px;
+		transition: border-color 0.5s;
+		img{
+			height: 16px;
+			margin-right: 10px;
+			display: inline-block;
+		}
+		&:hover {
+			border-color: $sheep_blue;
+			border-width: 3px;
+			padding-bottom: 9px;
+		}
+	}
+}
+
+.log-out-mobile{
+	height: 60px;
+	line-height: 60px;
+	width: 100%;
+	background-color: #ECECED;
+	color: $heading_color;
+	text-align: center;
+	font-weight: 600;
+	position: relative;
+	img{
+		height: 16px;
+		margin-right: 20px;
+	}
+	a{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/* === MEDIA QUERIES === */
+@media only screen and (max-width:1510px) {
+	#profile{
+		width: 950px;
+	}
+	.profile-left{
+		width: 190px;
+	}
+	.profile-ad{
+		height: 158px;
+	}
+	
+	.profile-right{
+		width: 740px;
+	}
+	.profile-box{
+		width: 700px;
+		&.order-details{
+			h2{
+				font-size: 16px;
+			}
+			.purchased-item-box{
+				.item-cost{
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:965px) {
+	#profile{
+		width: 100%;
+	}
+	
+	.verify-email-banner{
+		width: 740px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.profile-right{
+		clear: both;
+		float: none;
+		margin: auto;
+	}
+}
+
+@media only screen and (max-width:750px) {
+	.mobile-hidden-750 {
+		display: none;
+	}
+	.desktop-hidden-750 {
+		display: block;
+	}
+	.verify-email-banner{
+		line-height: normal;
+		width: 410px;
+		height: 60px;
+		display: table;
+		span{
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+	.profile-right{
+		width: 450px;
+	}
+	.profile-box{
+		width: 410px;
+		&.order-details{
+			.order-number{
+				font-size: 18px;
+			}
+			.order-number, .order-date{
+				float: none;
+				clear: both;
+			}
+			.order-box{
+				width: 100%;
+				&.left, &.right{
+					float: none;
+					clear: both;
+				}
+			}
+			.purchased-item-box{
+				.item-img{
+					width: 78px;
+					height: 71px;
+				}
+				.img-info-wrapper{
+					margin-bottom: 20px;
+					width: 90%;
+					padding-left: 5%;
+					padding-right: 5%;
+				}
+				.item-img, item-info{
+					margin: 0;
+				}
+				.item-info{
+					width: 73%;
+				}
+				.item-cost{
+					float: none;
+					clear: both;
+					width: 90%;
+					padding-left: 5%;
+					padding-right: 5%;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:460px) {
+	.profile-options-slick{
+		.slick-list{
+			margin-left: 0;
+		}
+	}
+	.verify-email-banner{
+		width: 90%;
+		height: 75px;
+	}
+	.purchases-header{
+		margin-left: 8px;
+	}
+	.profile-right{
+		width: 100%;
+	}
+	.profile-box{
+		&.order-details{
+			border-radius: 0;
+			padding: 5%;
+			width: 90%;
+			.purchased-item-box{
+				.item-info{
+					width: 65%;
+				}
+				.item-cost{
+					p{
+						color: #81838C;
+						span{
+							font-weight: 600;
+						}
+					}
+				}
+			}
+			.description-box{
+				p{
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	.log-out-mobile{
+		width: 90%;
+		margin: auto;
+	}
+}
+
+@media only screen and (max-width:370px) {
+	.profile-box{
+		&.order-details{
+			.purchased-item-box{
+				.item-info{
+					width: 58%;
+				}
+			}
+		}
+	}
+}

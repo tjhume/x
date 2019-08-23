@@ -16,7 +16,7 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
 		
 		<!-- Custom CSS -->
-		<link href="assets/css/messages.css" rel = "stylesheet">
+		<link href="assets/css/feedback.css" rel = "stylesheet">
 		
 		<!-- HTML 5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
 		
@@ -90,9 +90,9 @@
 				
 				<!-- PROFILE OPTIONS (MOBILE ONLY) -->
 				<div class = "profile-options-slick desktop-hidden">
-					<a href = "#"><li id = "active-category"><img src = "assets/img/my-profile-active.png">My Profile</li></a>
+					<a href = "#"><li><img src = "assets/img/my-profile.png">My Profile</li></a>
 					<a href = "#"><li><img src = "assets/img/messages.png">Messages</li></a>
-					<a href = "#"><li><img src = "assets/img/purchases.png">Purchases</li></a>
+					<a href = "#"><li id = "active-category"><img src = "assets/img/purchases-active.png">Purchases</li></a>
 					<a href = "#"><li><img src = "assets/img/help.png">Help</li></a>
 				</div><!-- PROFILE OPTIONS -->
 				
@@ -105,8 +105,8 @@
 				<div class = "profile-left mobile-hidden">
 					<div class = "profile-sidebar">
 						<div class = "my-profile"><img src = "assets/img/my-profile.png"><a href = "#"></a>My Profile</div>
-						<div class = "messages active"><img src = "assets/img/messages-active.png"><a href = "#"></a>Messages</div>
-						<div class = "purchases"><img src = "assets/img/purchases.png"><a href = "#"></a>Purchases</div>
+						<div class = "messages"><img src = "assets/img/messages.png"><a href = "#"></a>Messages</div>
+						<div class = "purchases active"><img src = "assets/img/purchases-active.png"><a href = "#"></a>Purchases</div>
 						<div class = "help"><img src = "assets/img/help.png"><a href = "#"></a>Help</div>
 						<div class = "log-out"><img src = "assets/img/log-out.png"><a href = "#"></a>Log Out</div>
 					</div>
@@ -116,118 +116,125 @@
 				<!-- PROFILE CONTENT -->
 				<div class = "profile-right">
 				
-					<!-- MESSAGES -->
-					<div class = "messages-header"><h1>Messages</h1><span class = "active"><a href = "#">Inbox</a></span><span><a href = "#">Sent</a></span></div>
-					<div class = "profile-box messages">
-						<h3 class = "from-heading">From</h3><h3 class = "subject-heading">Subject</h3><h3 class = "date-heading">Date</h3>
+					<!-- FEEDBACK -->
+					<div class = "feedback-header"><h1>Leave Feedback</h1></div>
+					<div class = "profile-box feedback">
 						
-						<!-- MESSAGE LIST (DESKTOP ONLY >750px) -->
-						<div class = "message-list mobile-hidden-750">
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition Lock Cylinder</div>
-								<div class = "date">07/24/19</div>
+						<!-- PURCHASED ITEM BOX -->
+						<div class = "purchased-item-box">
+							<div class = "img-info-wrapper">
+								<!-- ITEM IMG -->
+								<div class = "item-img"></div>
+								
+								<!-- ITEM INFO -->
+								<div class = "item-info">
+									<h2 class = "item-name">Troy Bilt Mower, only used once</h2>
+									<p class = "item-date desktop-hidden-750"><span>07/24/19</span></p>
+									<p class = "item-seller">Purchase #: <span>2837292</span></p>
+									<p class = "item-seller">Seller: <span>jdoe002</span></p>
+									<p class = "item-status">Condition: <span>New</span></p>
+									<p class = "item-status">Amount: <span>$489</span></p>
+								</div><!-- end item info -->
 							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition Lock Cylinder</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition Lock Cylinder</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition Lock Cylinder</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition Lock Cylinder</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition Lock Cylinder</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition Lock Cylinder</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition Lock Cylinder</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition Lock Cylinder</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition Lock Cylinder</div>
-								<div class = "date">07/24/19</div>
-							</div>
-						</div><!-- end message list (desktop only) -->
+							
+							<!-- ITEM DATE -->
+							<div class = "item-date mobile-hidden-750">
+								<p>Date: <span>07/24/19</span></p>
+							</div><!-- end item date -->
+						</div><!-- end purchased item box -->
 						
-						<!-- MESSAGE LIST (MOBILE ONLY <750px) -->
-						<div class = "message-list desktop-hidden-750">
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition...</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition...</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition...</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition...</div>
-								<div class = "date">07/24/19</div>
-							</div>
-						</div><!-- end message list (mobile only) -->
+						<!-- MOBILE SECTION DIVIDER -->
+						<div class = "feedback-mobile-divider"></div>
 						
-						<!-- MESSAGE NAVIGATION (DESKTOP ONLY <750px) -->
-						<div class = "messages-navigation mobile-hidden-750">
-							<div class = "items-per-page">
-								<p>Items per page:</p>
-								<ul>
-									<li><a href = "#"><div class = "num-items active">10</div></a></li>
-									<li><a href = "#"><div class = "num-items">25</div></a></li>
-									<li><a href = "#"><div class = "num-items">50</div></a></li>
-									<li><a href = "#"><div class = "num-items">100</div></a></li>
-								</ul>
-							</div>
-							<div class = "page-nav">
-								<ul>
-									<li><a href = "#"><div class = "first-arrow disabled"></div></a></li>
-									<li><a href = "#"><div class = "back-arrow disabled"></div></a></li>
-									<li><a href = "#"><div class = "page-num active">1</div></a></li>
-									<li><a href = "#"><div class = "page-num">2</div></a></li>
-									<li><a href = "#"><div class = "page-num desktop-only-460">3</div></a></li>
-									<li><a href = "#"><div class = "page-num desktop-only-460">4</div></a></li>
-									<li><a href = "#"><div class = "more-pages">...</div></a></li>
-									<li><a href = "#"><div class = "forward-arrow"></div></a></li>
-									<li><a href = "#"><div class = "last-arrow"></div></a></li>
-								</ul>
-							</div>
-						</div><!-- end message navigation (desktop only) -->
-					</div><!-- end messages -->
-					
-					<!-- LOG OUT BUTTON (MOBILE ONLY) -->
-					<div class = "log-out-mobile desktop-hidden"><a href = "#"><img src = "assets/img/log-out.png">Log Out</a></div>
+						<form>
+							<!-- RATE TRANSACTION -->
+							<div class = "rate-transaction">
+								<h2>Rate this transaction</h2>
+								<label class="container">Positive
+									<input type="radio" checked="checked" name="radio">
+									<span class="checkmark"></span>
+								</label>
+								<label class="container">Neutral
+									<input type="radio" name="radio">
+									<span class="checkmark"></span>
+								</label>
+								<label class="container">Negative
+									<input type="radio" name="radio">
+									<span class="checkmark"></span>
+								</label>
+							</div><!-- end rate transaction -->
+							
+							<!-- TELL US MORE -->
+							<div class = "tell-more">
+								<h2>Tell us more</h2>
+								<input class = "leave-comment" type = "text" placeholder = "Write your comment" maxlength = "80">
+								<div class = "characters-remaining"><span class = "characters">80</span> characters remaining</div>
+							</div><!-- end tell us more -->
+							
+							<!-- RATE DETAILS -->
+							<div class = "rate-details">
+								<h2>Rate details about this purchase</h2>
+								
+								<!-- RATE ROW -->
+								<div class = "rate-row">
+									How accurate was the item description?
+									<div class = "rate-stars">
+										<div class = "filled-star"></div>
+										<div class = "filled-star"></div>
+										<div class = "filled-star"></div>
+										<div class = "filled-star"></div>
+										<div class = "empty-star"></div>
+									</div>
+								</div><!-- end rate row -->
+								
+								<!-- RATE ROW -->
+								<div class = "rate-row">
+									How satisfied were you with the seller’s communication?
+									<div class = "rate-stars">
+										<div class = "filled-star"></div>
+										<div class = "filled-star"></div>
+										<div class = "empty-star"></div>
+										<div class = "empty-star"></div>
+										<div class = "empty-star"></div>
+									</div>
+								</div><!-- end rate row -->
+								
+								<!-- RATE ROW -->
+								<div class = "rate-row">
+									How quickly did the seller ship the item?
+									<div class = "rate-stars">
+										<div class = "filled-star"></div>
+										<div class = "filled-star"></div>
+										<div class = "filled-star"></div>
+										<div class = "filled-star"></div>
+										<div class = "filled-star"></div>
+									</div>
+								</div><!-- end rate row -->
+								
+								<!-- RATE ROW -->
+								<div class = "rate-row">
+									How reasonable were the shipping and handling charges?
+									<div class = "rate-stars">
+										<div class = "filled-star"></div>
+										<div class = "filled-star"></div>
+										<div class = "filled-star"></div>
+										<div class = "filled-star"></div>
+										<div class = "empty-star"></div>
+									</div>
+								</div><!-- end rate row -->
+							</div><!-- end rate details -->
+							
+							<!-- BEGIN SUBMIT FEEDBACK -->
+							<div class = "submit-feedback">
+								<div class = "edit-notification">Once you leave feedback, you can't edit or take it back</div>
+								<div class = "cancel-submit">
+									<a href = "#">Cancel</a>
+									<input type = "submit" value = "Send Feedback">
+								</div>
+							</div><!-- end submit feedback -->
+						</form>
+						
+					</div><!-- end order details -->
 					
 				</div><!-- end profile content -->
 			</div>
@@ -393,7 +400,23 @@
 			then close all select boxes: */
 			document.addEventListener("click", closeAllSelect);
 			
-			
+			/* JS Input character count and validation */
+			$('.leave-comment').on("input", function(){
+				var maxLength = 80;
+				var currentLength = $(this).val().length;
+				var remaining = maxLength - currentLength;
+				var value = $(this).val();
+				
+				if (remaining < 0){
+					remaining = 0;
+				}
+				
+				$('.characters').html(remaining);
+				
+				if (currentLength > maxLength){
+					$(this).val(value.substring(0, 80));
+				}
+			});
 			
 			
 			

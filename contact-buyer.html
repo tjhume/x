@@ -16,7 +16,7 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
 		
 		<!-- Custom CSS -->
-		<link href="assets/css/messages.css" rel = "stylesheet">
+		<link href="assets/css/contact-buyer.css" rel = "stylesheet">
 		
 		<!-- HTML 5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
 		
@@ -90,9 +90,9 @@
 				
 				<!-- PROFILE OPTIONS (MOBILE ONLY) -->
 				<div class = "profile-options-slick desktop-hidden">
-					<a href = "#"><li id = "active-category"><img src = "assets/img/my-profile-active.png">My Profile</li></a>
+					<a href = "#"><li><img src = "assets/img/my-profile.png">My Profile</li></a>
 					<a href = "#"><li><img src = "assets/img/messages.png">Messages</li></a>
-					<a href = "#"><li><img src = "assets/img/purchases.png">Purchases</li></a>
+					<a href = "#"><li id = "active-category"><img src = "assets/img/purchases-active.png">Purchases</li></a>
 					<a href = "#"><li><img src = "assets/img/help.png">Help</li></a>
 				</div><!-- PROFILE OPTIONS -->
 				
@@ -105,8 +105,8 @@
 				<div class = "profile-left mobile-hidden">
 					<div class = "profile-sidebar">
 						<div class = "my-profile"><img src = "assets/img/my-profile.png"><a href = "#"></a>My Profile</div>
-						<div class = "messages active"><img src = "assets/img/messages-active.png"><a href = "#"></a>Messages</div>
-						<div class = "purchases"><img src = "assets/img/purchases.png"><a href = "#"></a>Purchases</div>
+						<div class = "messages"><img src = "assets/img/messages.png"><a href = "#"></a>Messages</div>
+						<div class = "purchases active"><img src = "assets/img/purchases-active.png"><a href = "#"></a>Purchases</div>
 						<div class = "help"><img src = "assets/img/help.png"><a href = "#"></a>Help</div>
 						<div class = "log-out"><img src = "assets/img/log-out.png"><a href = "#"></a>Log Out</div>
 					</div>
@@ -116,122 +116,51 @@
 				<!-- PROFILE CONTENT -->
 				<div class = "profile-right">
 				
-					<!-- MESSAGES -->
-					<div class = "messages-header"><h1>Messages</h1><span class = "active"><a href = "#">Inbox</a></span><span><a href = "#">Sent</a></span></div>
-					<div class = "profile-box messages">
-						<h3 class = "from-heading">From</h3><h3 class = "subject-heading">Subject</h3><h3 class = "date-heading">Date</h3>
+					<!-- CONTACT BUYER -->
+					<div class = "contact-buyer-header"><h1>Contact Buyer</h1></div>
+					<div class = "profile-box contact-buyer">
 						
-						<!-- MESSAGE LIST (DESKTOP ONLY >750px) -->
-						<div class = "message-list mobile-hidden-750">
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition Lock Cylinder</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition Lock Cylinder</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition Lock Cylinder</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition Lock Cylinder</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition Lock Cylinder</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition Lock Cylinder</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition Lock Cylinder</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition Lock Cylinder</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition Lock Cylinder</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition Lock Cylinder</div>
-								<div class = "date">07/24/19</div>
-							</div>
-						</div><!-- end message list (desktop only) -->
+						<form>
+							<!-- TO -->
+							<h3>To</h3>
+							<input class = "disabled-input" type = "text" placeholder = "Jason Laredo" disabled>
+
+							<!-- ITEM -->
+							<h3>Item</h3>
+							<input class = "disabled-input" type = "text" placeholder = "Troy Bilt Mower, only used once" disabled>
+
+							<!-- SUBJECT -->
+							<h3>Subject</h3>
+							<div class = "subject-select"><select>
+								<option value="0">Select subject:</option>
+								<option value="1">Item Details</option>
+								<option value="2">Option 2</option>
+								<option value="3">Option 3</option>
+								<option value="4">Option 4</option>
+								<option value="5">Option 5</option>
+								<option value="6">Option 6</option>
+							</select></div>
+							
+							<!-- MESSAGE -->
+							<h3>Message</h3>
+							<textarea class = "message-text"></textarea>
+								
+							<!-- SUBMIT FEEDBACK -->
+							<div class = "submit-feedback">
+								<div class = "captcha-example"></div>
+								<div class = "cancel-submit">
+									<a class = "mobile-hidden-750" href = "#">Cancel</a>
+									<input type = "submit" value = "Send Message">
+									<a class = "desktop-hidden-750" href = "#">Cancel</a>
+								</div>
+							</div><!-- end submit feedback -->
+						</form>
 						
-						<!-- MESSAGE LIST (MOBILE ONLY <750px) -->
-						<div class = "message-list desktop-hidden-750">
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition...</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition...</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition...</div>
-								<div class = "date">07/24/19</div>
-							</div>
-							<div class = "message-item">
-								<div class = "from">aaron02</div>
-								<div class = "subject">Regarding: Item Details Ilc147 Ignition...</div>
-								<div class = "date">07/24/19</div>
-							</div>
-						</div><!-- end message list (mobile only) -->
-						
-						<!-- MESSAGE NAVIGATION (DESKTOP ONLY <750px) -->
-						<div class = "messages-navigation mobile-hidden-750">
-							<div class = "items-per-page">
-								<p>Items per page:</p>
-								<ul>
-									<li><a href = "#"><div class = "num-items active">10</div></a></li>
-									<li><a href = "#"><div class = "num-items">25</div></a></li>
-									<li><a href = "#"><div class = "num-items">50</div></a></li>
-									<li><a href = "#"><div class = "num-items">100</div></a></li>
-								</ul>
-							</div>
-							<div class = "page-nav">
-								<ul>
-									<li><a href = "#"><div class = "first-arrow disabled"></div></a></li>
-									<li><a href = "#"><div class = "back-arrow disabled"></div></a></li>
-									<li><a href = "#"><div class = "page-num active">1</div></a></li>
-									<li><a href = "#"><div class = "page-num">2</div></a></li>
-									<li><a href = "#"><div class = "page-num desktop-only-460">3</div></a></li>
-									<li><a href = "#"><div class = "page-num desktop-only-460">4</div></a></li>
-									<li><a href = "#"><div class = "more-pages">...</div></a></li>
-									<li><a href = "#"><div class = "forward-arrow"></div></a></li>
-									<li><a href = "#"><div class = "last-arrow"></div></a></li>
-								</ul>
-							</div>
-						</div><!-- end message navigation (desktop only) -->
-					</div><!-- end messages -->
-					
-					<!-- LOG OUT BUTTON (MOBILE ONLY) -->
-					<div class = "log-out-mobile desktop-hidden"><a href = "#"><img src = "assets/img/log-out.png">Log Out</a></div>
+					</div><!-- end contact buyer -->
 					
 				</div><!-- end profile content -->
 			</div>
-		</section><!-- end products section -->
+		</section><!-- end profile section -->
 		
 		
 		<!-- FOOTER
@@ -368,7 +297,59 @@
 				this.classList.toggle("select-arrow-active");
 			  });
 			}
-
+			
+			/* === CUSTOM SELECT FOR SUBJECT SELECT === */
+			var filterX, filterI, filterJ, filterSelElmnt, filterA, filterB, filterC;
+			/* Look for any elements with the class "subject-select": */
+			filterX = document.getElementsByClassName("subject-select");
+			for (filterI = 0; filterI < filterX.length; filterI++) {
+			  filterSelElmnt = filterX[filterI].getElementsByTagName("select")[0];
+			  /* For each element, create a new DIV that will act as the selected item: */
+			  filterA = document.createElement("DIV");
+			  filterA.setAttribute("class", "select-selected");
+			  filterA.innerHTML = filterSelElmnt.options[filterSelElmnt.selectedIndex].innerHTML;
+			  filterX[filterI].appendChild(filterA);
+			  /* For each element, create a new DIV that will contain the option list: */
+			  filterB = document.createElement("DIV");
+			  filterB.setAttribute("class", "select-items select-hide");
+			  for (filterJ = 1; filterJ < filterSelElmnt.length; filterJ++) {
+				/* For each option in the original select element,
+				create a new DIV that will act as an option item: */
+				filterC = document.createElement("DIV");
+				filterC.innerHTML = filterSelElmnt.options[filterJ].innerHTML;
+				filterC.addEventListener("click", function(e) {
+					/* When an item is clicked, update the original select box,
+					and the selected item: */
+					var y, i, k, s, h;
+					s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+					h = this.parentNode.previousSibling;
+					for (i = 0; i < s.length; i++) {
+					  if (s.options[i].innerHTML == this.innerHTML) {
+						s.selectedIndex = i;
+						h.innerHTML = this.innerHTML;
+						y = this.parentNode.getElementsByClassName("same-as-selected");
+						for (k = 0; k < y.length; k++) {
+						  y[k].removeAttribute("class");
+						}
+						this.setAttribute("class", "same-as-selected");
+						break;
+					  }
+					}
+					h.click();
+				});
+				filterB.appendChild(filterC);
+			  }
+			  filterX[filterI].appendChild(filterB);
+			  filterA.addEventListener("click", function(e) {
+				/* When the select box is clicked, close any other select boxes,
+				and open/close the current select box: */
+				e.stopPropagation();
+				closeAllSelect(this);
+				this.nextSibling.classList.toggle("select-hide");
+				this.classList.toggle("select-arrow-active");
+			  });
+			}
+			
 			function closeAllSelect(elmnt) {
 			  /* A function that will close all select boxes in the document,
 			  except the current select box: */
@@ -388,13 +369,11 @@
 				}
 			  }
 			}
-
+			
+			
 			/* If the user clicks anywhere outside the select box,
 			then close all select boxes: */
 			document.addEventListener("click", closeAllSelect);
-			
-			
-			
 			
 			
 			$(document).ready(function(){
