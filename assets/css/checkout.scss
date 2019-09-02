@@ -1,0 +1,664 @@
+/* Colors */
+$dark: #161616;
+$sheep_blue: #44AAED;
+$heading_color: #464855;
+$item_category_text: #898EA2;
+$product_shipping_text: #7C7D81;
+$description_text: #90929D;
+$package_title_text: #3DA7ED;
+$package_price_text: #353535;
+$package_details_text: #363636;
+$search_category_gray: #F6F7F7;
+$search_category_highlight: rgba(0, 0, 0, 0.1);
+$search_magnifier_background: #ECF6FD;
+$products_packages_containers_background: #F5F6F8;
+$browse_more_background: #EBF1F7;
+
+/* Fonts */
+$nunito: Nunito, Arial, sans-serif;
+$montserrat: Montserrat, Arial, sans-serif;
+
+/* Borders */
+$select_box_border: #D8D9DB transparent transparent transparent;
+$select_arrow_border: transparent transparent #D8D9DB transparent;
+
+@import 'style.scss';
+
+/* === MY PROFILE === */
+
+/* Same styles as product-container in style.scss. Can be put together and given the same name */
+#profile-container {
+	width: 100%;
+	padding-bottom: 50px;
+	background-color: $products_packages_containers_background;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.desktop-hidden-750{
+	display: none;
+}
+
+/* Could be moved (along with #mobile-login-register below) to style.scss. Probably add a class like "logged-in" for when the user is logged in and add these specific styles with &.logged-in{} in style.scss */
+#login-register, #mobile-login-register{
+	position: relative;
+	span{
+		font-weight: bold;
+		margin-left: 0px;
+		margin-right: 0px;
+		a{
+			font-weight: normal;
+			color: $sheep_blue;
+			margin-left: 20px;
+			margin-right: 22px;
+		}
+	}
+	img{
+		height: 15px;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+#mobile-login-register{
+	span{
+		a{
+			font-weight: 600;
+			margin-right: 16px;
+			font-size: 14px;
+		}
+	}
+	img{
+		top: 6px;
+		right: 10px;
+	}
+}
+
+/* Similar to #products in style.scss, but with different padding. Could probably make these the same and change spacing a different, page-specific element */
+#profile{
+	width: 1500px;
+	margin: auto;
+	padding-top: 20px;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.checkout-banner{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	width: 100%;
+	background-color: #F6EFD1;
+	box-shadow: 1px 0 0 0 #FFFFFF;
+	border-radius: 4px;
+	color: $heading_color;
+	font-weight: 600;
+	font-size: 12px;
+	text-align: center;
+	margin-bottom: 30px;
+	display: table;
+	div{
+		display: table-cell;
+		vertical-align: middle;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	p{
+		margin: 0;
+	}
+	.banner-header{
+		font-size: 16px;
+		margin-bottom: 8px;
+		span{
+			font-weight: bold;
+			font-size: 18px;
+		}
+	}
+	a{
+		color: $sheep_blue;
+	}
+}
+.profile-right{
+	float: right;
+	width: 1180px;
+	&.checkout{
+		float: none;
+		margin: auto;
+		.checkout-bottom-text{
+			width: 96%;
+			text-align: center;
+			padding-left: 2%;
+			padding-right: 2%;
+			padding-bottom: 20px;
+			color: #7E7E7E;
+			font-weight: 500;
+		}
+	}
+}
+
+/* Can be moved to style.scss with more generic name */
+.checkout-header{
+	height: 30px;
+	line-height: 30px;
+	margin-bottom: 10px;
+	h1{
+		font-weight: 600;
+		color: $heading_color;
+		float: left;
+		margin-right: 30px;
+		font-size: 22px;
+	}
+}
+
+/* The general profile-box settings could be moved to style.scss */
+.profile-box{
+	width: 1140px;
+	background-color: white;
+	overflow: auto;
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 6px 0 rgba(69,73,91,0.08);
+	border-radius: 10px;
+	h1, h2, h3{
+		font-weight: 600;
+		color: $heading_color;
+	}
+	h1{
+		font-size: 22px;
+	}
+	h2{
+		font-size: 16px;
+	}
+	h3{
+		font-size: 12px;
+	}
+	&.checkout{
+		padding-top: 30px;
+		color: $heading_color;
+		h1{
+			font-size: 20px;
+			font-weight: bold;
+		}
+		h2{
+			font-size: 18px;
+			font-weight: bold;
+		}
+		h3{
+			font-size: 16px;
+			font-weight: bold;
+			margin-bottom: 10px;
+			span{
+				color: $sheep_blue;
+				margin-right: 15px;
+			}
+		}
+		.shipping-box{
+			border: 1px solid #D5D5D8;
+			border-radius: 6px;
+			width: 100%;
+			height: 150px;
+			margin-bottom: 40px;
+			h3{
+				padding-left: 10px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+			p{
+				font-weight: 500;
+				margin-top: 0;
+				margin-bottom: 0;
+				font-size: 14px;
+				padding-left: 20px;
+			}
+			.divider{
+				width: 98%;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 10px;
+			}
+		}
+		
+		/* The container must be positioned relative: */
+		.subject-select {
+		  position: relative;
+		  font-family: $montserrat;
+		  color: $heading_color;
+		  font-weight: 500;
+		  border-radius: 4px;
+		  font-size: 14px;
+		  margin-left: 20px;
+		  margin-bottom: 20px;
+		  margin-top: 20px;
+		  width: 240px;
+		  height: 36px;
+		  line-height: 36px;
+		}
+
+		.subject-select select {
+		  display: none; /*hide original SELECT element: */
+		}
+
+		/* Style the arrow inside the select element: */
+		.select-selected:after {
+		  position: absolute;
+		  content: "";
+		  top: 14px;
+		  right: 10px;
+		  width: 0;
+		  height: 0;
+		  border: 6px solid transparent;
+		  border-color: $heading_color transparent transparent transparent;
+		}
+
+		/* Point the arrow upwards when the select box is open (active): */
+		.select-selected.select-arrow-active:after {
+		  border-color: transparent transparent $heading_color transparent;
+		  top: 8px;
+		}
+
+		/* style the items (options), including the selected item: */
+		.select-items div,.select-selected {
+		  color: $heading_color;
+		  padding: 8px 16px;
+		  cursor: pointer;
+		}
+		
+		.select-items div{
+			border: none;
+			height: 20px;
+			line-height: 20px;
+		}
+		
+		.select-selected {
+		  background-color: $search_category_gray;
+		  padding: 0;
+		  padding-left: 10px;
+		  height: 36px;
+		  line-height: 36px;
+		  text-align: left;
+		}
+
+		/* Style items (options): */
+		.select-items {
+		  position: absolute;
+		  background-color: $search_category_gray;
+		  top: 100%;
+		  left: 0;
+		  right: 0;
+		  z-index: 99;
+		}
+
+		/* Hide the items when the select box is closed: */
+		.select-hide {
+		  display: none;
+		}
+
+		.select-items div:hover, .same-as-selected {
+		  background-color: rgba(0, 0, 0, 0.1);
+		}
+		
+		.header-review, .header-price, .header-quantity, .header-subtotal{
+			float: left;
+		}
+		.header-review{
+			width: 50%;
+		}
+		.header-price, .header-quantity, .header-subtotal{
+			width: 16.66%;
+			font-size: 14px;
+		}
+		
+		/* Some similar styles to same class in purchases.scss */
+		.purchased-item-box{
+			float: none;
+			clear: both;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+			overflow: auto;
+			background-color: $search_category_gray;
+			position: relative;
+			h2{
+				margin-bottom: 10px;
+				padding-right: 10px;
+			}
+			p{
+				font-size: 14px;
+				font-weight: bold;
+				margin-top: 0;
+				margin-bottom: 5px;
+				span{
+					font-weight: 300;
+				}
+			}
+			.img-info-wrapper{
+				width: 50%;
+				overflow: auto;
+				float: left;
+			}
+			.item-img{
+				margin-left: 20px;
+				float: left;
+				background-image: url("../img/sample-product2.jpg");
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+				width: 151px;
+				height: 138px;
+				border-radius: 10px;
+			}
+			.item-info{
+				padding-top: 8px;
+				float: left;
+				margin-left: 20px;
+			}
+			.item-price, .item-quantity, .item-subtotal{
+				float: left;
+				width: 16.66%;
+				font-size: 14px;
+				overflow: auto;
+			}
+			.item-price, .item-subtotal{
+				height: 38px;
+				line-height: 38px;
+			}
+			.item-quantity{
+				input{
+					width: 50%;
+					height: 38px;
+					line-height: 38px;
+					color: $heading_color;
+					font-size: 14px;
+					font-family: $montserrat;
+					border: 1px solid #ECECED;
+					box-shadow: 0 2px 1px 0 rgba(0,0,0,0.03);
+					padding-left: 10px;
+					&:focus{
+						outline: none;
+					}
+				}
+			}
+		}
+		/* Similar styles to item-cost in order-details.scss, with spacing and font color/weight differences. Divider is longer. */
+		.checkout-total{
+			width: 150px;
+			float: right;
+			margin-right: 60px;
+			margin-bottom: 40px;
+			p{
+				width: 100%;
+				margin-bottom: 6px;
+				margin-top: 6px;
+				position: relative;
+				color: #85868f;
+				font-weight: bold;
+				font-size: 14px;
+				span{
+					position: absolute;
+					top: 0;
+					right: 0;
+					font-weight: 600;
+				}
+			}
+			h2{
+				width: 100%;
+				position: relative;
+				span{
+					position: absolute;
+					top: 0;
+					right: 0;
+				}
+			}
+			.divider{
+				margin-top: 10px;
+				margin-bottom: 10px;
+				width: 110%;
+			}
+		}
+		.checkout-cancel-pay{
+			width: 100%;
+			float: none;
+			clear: both;
+			overflow: auto;
+			padding-bottom: 20px;
+			.cancel-order{
+				float: left;
+				width: 190px;
+				height: 45px;
+				line-height: 45px;
+				margin-top: 4px;
+				color: $sheep_blue;
+				border: 1px solid $sheep_blue;
+				border-radius: 10px;
+				text-align: center;
+				font-weight: 600;
+				position: relative;
+				a{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+				}
+			}
+			/* Similar styles to the button in product-details */
+			.paypal{
+				float: right;
+				width: 275px;
+				height: 53px;
+				background-image: url(../img/paypal.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+				position: relative;
+				a{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+
+/* === Mobile Styles === */
+
+/* Uses similar styles to #products-header {li{}} in style.scss. A lot of styles could be combined */
+.review-mobile-spacing{
+	width: 40%;
+	display: none;
+	float: left;
+	height: 1px;
+}
+
+.log-out-mobile{
+	height: 60px;
+	line-height: 60px;
+	width: 100%;
+	background-color: #ECECED;
+	color: $heading_color;
+	text-align: center;
+	font-weight: 600;
+	position: relative;
+	img{
+		height: 16px;
+		margin-right: 20px;
+	}
+	a{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/* === MEDIA QUERIES === */
+@media only screen and (max-width:1510px) {
+	#profile{
+		width: 950px;
+	}
+	.profile-right{
+		width: 740px;
+	}
+	.profile-box{
+		width: 700px;
+		&.checkout{
+			.purchased-item-box{
+				.item-img{
+					width: 120px;
+					height: 110px;
+				}
+				.item-info{
+					width: 50%;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:965px) {
+	#profile{
+		width: 100%;
+	}
+	
+	.checkout-banner{
+		width: 740px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media only screen and (max-width:750px) {
+	.mobile-hidden-750 {
+		display: none;
+	}
+	.desktop-hidden-750 {
+		display: block;
+	}
+	.checkout-banner{
+		width: 410px;
+		font-size: 12px;
+		.banner-header{
+			font-size: 14px;
+			span{
+				font-size: 16px;
+			}
+		}
+	}
+	.profile-right{
+		width: 450px;
+		&.checkout{
+			.checkout-bottom-text{
+				font-size: 12px;
+			}
+		}
+	}
+	.profile-box{
+		width: 410px;
+		&.checkout{
+			.header-quantity, .header-subtotal{
+				width: 25%;
+			}
+			.purchased-item-box{
+				.item-img{
+					display: none;
+				}
+				.item-info{
+					width: 100%;
+					margin: 0;
+					h2{
+						padding-left: 10px;
+						font-size: 14px;
+					}
+				}
+				.item-quantity, .item-subtotal{
+					width: 25%;
+				}
+			}
+			.checkout-total{
+				margin-right: 10px;
+			}
+			.checkout-cancel-pay{
+				.cancel-order{
+					float: none;
+					clear: both;
+					margin: auto;
+				}
+				.paypal{
+					float: none;
+					clear: both;
+					margin: auto;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:460px) {
+	.checkout-banner{
+		width: 90%;
+	}
+	.checkout-header{
+		margin-left: 8px;
+	}
+	.profile-right{
+		width: 100%;
+	}
+	.profile-box{
+		&.checkout{
+			border-radius: 0;
+			padding-left: 5%;
+			padding-right: 5%;
+			width: 90%;
+			.header-review{
+				float: none;
+				clear: both;
+				width: 100%;
+			}
+			.header-quantity{
+				font-size: 12px;
+				width: 30%;
+			}
+			.header-subtotal{
+				font-size: 12px;
+				width: 30%;
+			}
+			.purchased-item-box{
+				.img-info-wrapper{
+					width: 40%;
+				}
+				.item-info{
+					h2{
+						font-size: 12px;
+					}
+				}
+				.item-quantity{
+					width: 30%;
+					input{
+						font-size: 12px;
+						width: 80%;
+					}
+				}
+				.item-subtotal{
+					font-size: 12px;
+					width: 30%;
+				}
+			}
+			.checkout-cancel-pay{
+				.paypal{
+					width: 250px;
+					height: 48px;
+				}
+			}
+		}
+	}
+	.review-mobile-spacing{
+		display: block;
+	}
+	.log-out-mobile{
+		width: 90%;
+		margin: auto;
+	}
+}

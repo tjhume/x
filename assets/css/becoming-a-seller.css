@@ -937,10 +937,6 @@ footer {
   overflow: auto;
   overflow-x: hidden; }
 
-/* Can be moved to style.scss */
-.desktop-hidden-750 {
-  display: none; }
-
 /* Could be moved (along with #mobile-login-register below) to style.scss. Probably add a class like "logged-in" for when the user is logged in and add these specific styles with &.logged-in{} in style.scss */
 #login-register, #mobile-login-register {
   position: relative; }
@@ -959,6 +955,9 @@ footer {
     top: 0;
     right: 0; }
 
+.desktop-hidden-750 {
+  display: none; }
+
 #mobile-login-register span a {
   font-weight: 600;
   margin-right: 16px;
@@ -968,6 +967,29 @@ footer {
   top: 6px;
   right: 10px; }
 
+.becoming-seller-banner {
+  width: 100%;
+  background-color: rgba(61, 167, 237, 0.11);
+  -webkit-box-shadow: 1px 0 0 0 #FFFFFF;
+  box-shadow: 1px 0 0 0 #FFFFFF;
+  border-radius: 4px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #464855;
+  font-weight: 600;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 30px;
+  display: table; }
+  .becoming-seller-banner a {
+    color: #44AAED; }
+  .becoming-seller-banner div {
+    display: table-cell;
+    vertical-align: middle;
+    width: 95%;
+    padding-left: 2.5%;
+    padding-right: 2.5%; }
+
 /* Similar to #products in style.scss, but with different padding. Could probably make these the same and change spacing a different, page-specific element */
 #profile {
   width: 1500px;
@@ -976,91 +998,9 @@ footer {
   overflow: auto;
   overflow-x: hidden; }
 
-.verify-email-banner {
-  padding: 5px;
-  width: 100%;
-  background-color: rgba(61, 167, 237, 0.11);
-  -webkit-box-shadow: 1px 0 0 0 #FFFFFF;
-  box-shadow: 1px 0 0 0 #FFFFFF;
-  border-radius: 4px;
-  height: 40px;
-  line-height: 40px;
-  color: #464855;
-  font-weight: 600;
-  font-size: 12px;
-  text-align: center;
-  margin-bottom: 30px; }
-  .verify-email-banner a {
-    color: #44AAED; }
-
-.profile-left {
-  float: left;
-  margin-right: 20px;
-  width: 300px; }
-
 .profile-right {
-  float: right;
-  width: 1180px; }
-
-/* Sidebar has similar sizing to results sidebar, so these general styles could be combined in style.scss */
-.profile-sidebar {
   width: 100%;
-  margin-right: 44px;
-  background-color: white;
-  border-radius: 10px;
-  color: #464855;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: 14px;
-  font-weight: 600;
-  -webkit-box-shadow: 0 2px 6px 0 rgba(69, 73, 91, 0.08);
-  box-shadow: 0 2px 6px 0 rgba(69, 73, 91, 0.08);
-  margin-bottom: 20px; }
-  .profile-sidebar div {
-    width: 120px;
-    padding-left: 40px;
-    height: 40px;
-    line-height: 40px;
-    font-weight: 600;
-    color: #464855;
-    position: relative; }
-    .profile-sidebar div a {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 5; }
-    .profile-sidebar div img {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      height: 16px; }
-    .profile-sidebar div.active {
-      background-color: rgba(68, 170, 237, 0.08);
-      color: #44AAED;
-      border-radius: 0px 20px 20px 0px;
-      border-left: 3px solid #44AAED; }
-      .profile-sidebar div.active img {
-        left: 9px; }
-    .profile-sidebar div:nth-last-child(1) {
-      margin-top: 152px; }
-
-.profile-ad {
-  width: 100%;
-  height: 250px;
-  background-color: silver; }
-
-.purchases-header {
-  height: 30px;
-  line-height: 30px;
-  margin-bottom: 10px; }
-  .purchases-header h1 {
-    font-weight: 600;
-    color: #464855;
-    float: left;
-    margin-right: 30px;
-    font-size: 22px; }
+  margin: auto; }
 
 /* The general profile-box settings could be moved to style.scss */
 .profile-box {
@@ -1081,411 +1021,562 @@ footer {
     font-size: 16px; }
   .profile-box h3 {
     font-size: 12px; }
-  .profile-box.purchases {
-    color: #464855; }
-    .profile-box.purchases h2 {
-      font-size: 18px;
+  .profile-box.becoming-seller {
+    color: #464855;
+    width: 95%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-bottom: 40px;
+    padding-top: 40px; }
+    .profile-box.becoming-seller .seller-header {
       font-weight: bold;
-      margin-bottom: 10px; }
-    .profile-box.purchases h3 {
-      font-size: 14px;
-      font-weight: bold;
-      margin-bottom: 4px; }
-      .profile-box.purchases h3 span {
-        font-weight: 300; }
-    .profile-box.purchases .purchased-item-list {
-      width: 100%; }
-    .profile-box.purchases .purchased-item-box {
-      padding-top: 20px;
-      padding-bottom: 20px;
-      margin-bottom: 10px;
-      overflow: auto;
-      background-color: #F6F7F7;
-      position: relative; }
-      .profile-box.purchases .purchased-item-box .item-img {
-        margin-left: 20px;
-        float: left;
-        background-image: url("../img/sample-product2.jpg");
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        width: 125px;
-        height: 114px;
-        border-radius: 10px; }
-      .profile-box.purchases .purchased-item-box .item-info {
-        float: left;
-        margin-left: 20px; }
-      .profile-box.purchases .purchased-item-box .item-icons {
-        float: right;
-        margin-right: 20px; }
-        .profile-box.purchases .purchased-item-box .item-icons div {
-          background-color: #E1EEF5;
-          width: 36px;
-          height: 36px;
-          float: left;
-          margin-right: 20px;
-          -webkit-box-shadow: 1px 0 0 0 #FFFFFF;
-          box-shadow: 1px 0 0 0 #FFFFFF;
-          border-radius: 4px;
-          position: relative; }
-          .profile-box.purchases .purchased-item-box .item-icons div a {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 5; }
-          .profile-box.purchases .purchased-item-box .item-icons div:nth-last-child(1) {
-            margin-right: 0; }
-        .profile-box.purchases .purchased-item-box .item-icons .mail-icon, .profile-box.purchases .purchased-item-box .item-icons .star-icon {
-          background-size: 20px 20px;
-          background-position: center;
-          background-repeat: no-repeat; }
-        .profile-box.purchases .purchased-item-box .item-icons .mail-icon {
-          background-image: url("../img/messages-active.png"); }
-        .profile-box.purchases .purchased-item-box .item-icons .star-icon {
-          background-image: url("../img/purchases-star.png"); }
-        .profile-box.purchases .purchased-item-box .item-icons .view-order {
-          width: 101px;
-          padding-left: 20px;
-          color: #44AAED;
-          font-size: 12px;
-          font-weight: 600;
-          line-height: 36px; }
-          .profile-box.purchases .purchased-item-box .item-icons .view-order span {
-            position: absolute;
-            top: -2px;
-            right: 15px;
-            font-weight: normal;
-            font-size: 26px; }
-      .profile-box.purchases .purchased-item-box .item-date {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        font-weight: 300;
-        font-size: 14px; }
-
-/* Same styles as results-navigation in style.scss with slight spacing/sizing differences. These can be combined in style.scss */
-.purchases-navigation {
-  overflow: auto;
-  margin-bottom: 20px; }
-  .purchases-navigation .items-per-page {
-    float: left;
-    color: #464855; }
-    .purchases-navigation .items-per-page p {
-      margin-top: 2px;
-      margin-bottom: 7px;
-      font-weight: 600;
-      font-size: 12px; }
-    .purchases-navigation .items-per-page ul {
-      margin: 0;
-      padding: 0; }
-    .purchases-navigation .items-per-page li {
-      list-style-type: none;
-      float: left;
-      margin-right: 5px; }
-      .purchases-navigation .items-per-page li:nth-last-child(1) {
-        margin-right: 0; }
-    .purchases-navigation .items-per-page .num-items {
-      font-size: 12px;
-      width: 30px;
-      height: 30px;
-      line-height: 30px;
-      border-radius: 5px;
-      background-color: white;
-      border: 1px solid #ebebeb;
-      text-align: center; }
-    .purchases-navigation .items-per-page .active {
-      background-color: #44AAED;
-      color: white; }
-  .purchases-navigation .page-nav {
-    margin-top: 12px;
-    float: right; }
-    .purchases-navigation .page-nav ul {
-      padding: 0; }
-    .purchases-navigation .page-nav li {
-      list-style-type: none;
-      float: left;
-      margin-right: 5px; }
-      .purchases-navigation .page-nav li:nth-last-child(1) {
-        margin-right: 0; }
-    .purchases-navigation .page-nav div {
-      width: 25px;
-      height: 25px;
-      line-height: 25px;
-      background-size: 12px 12px;
-      background-position: center center;
-      background-repeat: no-repeat;
       text-align: center;
-      font-weight: 600;
-      color: #44AAED;
-      font-size: 14px; }
-    .purchases-navigation .page-nav .page-num.active {
-      color: white;
-      background-color: #44AAED;
-      border-radius: 20px; }
-    .purchases-navigation .page-nav .first-arrow {
-      background-image: url("../img/first-arrow.png"); }
-      .purchases-navigation .page-nav .first-arrow.disabled {
-        background-image: url("../img/first-arrow-disabled.png"); }
-    .purchases-navigation .page-nav .back-arrow {
-      background-image: url("../img/back-arrow.png"); }
-      .purchases-navigation .page-nav .back-arrow.disabled {
-        background-image: url("../img/back-arrow-disabled.png"); }
-    .purchases-navigation .page-nav .forward-arrow {
-      background-image: url("../img/forward-arrow.png"); }
-      .purchases-navigation .page-nav .forward-arrow.disabled {
-        background-image: url("../img/forward-arrow-disabled.png"); }
-    .purchases-navigation .page-nav .last-arrow {
-      background-image: url("../img/last-arrow.png"); }
-      .purchases-navigation .page-nav .last-arrow.disabled {
-        background-image: url("../img/last-arrow-disabled.png"); }
+      margin-bottom: 40px; }
+    .profile-box.becoming-seller .steps {
+      width: 650px;
+      overflow: auto;
+      margin: auto;
+      margin-bottom: 60px; }
+      .profile-box.becoming-seller .steps .top {
+        width: 600px;
+        overflow: auto;
+        margin: auto; }
+        .profile-box.becoming-seller .steps .top div {
+          float: left; }
+      .profile-box.becoming-seller .steps .active-step, .profile-box.becoming-seller .steps .inactive-step {
+        font-weight: 600;
+        font-size: 24px;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center; }
+      .profile-box.becoming-seller .steps .active-step {
+        color: white;
+        background: #44aaed;
+        background: -moz-linear-gradient(45deg, #44aaed 0%, #4464ed 100%);
+        background: -webkit-linear-gradient(45deg, #44aaed 0%, #4464ed 100%);
+        background: -o-linear-gradient(45deg, #44aaed 0%, #4464ed 100%);
+        background: linear-gradient(45deg, #44aaed 0%, #4464ed 100%);
+        -webkit-box-shadow: 4px 4px 16px 0 rgba(50, 114, 192, 0.16);
+        box-shadow: 4px 4px 16px 0 rgba(50, 114, 192, 0.16);
+        border-radius: 60px; }
+      .profile-box.becoming-seller .steps .inactive-step {
+        color: #D5D5D8; }
+      .profile-box.becoming-seller .steps .first {
+        margin-right: 25px; }
+      .profile-box.becoming-seller .steps .second {
+        margin-left: 25px;
+        margin-right: 25px; }
+      .profile-box.becoming-seller .steps .third {
+        margin-left: 25px; }
+      .profile-box.becoming-seller .steps .inactive-dot, .profile-box.becoming-seller .steps .active-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-top: 26px; }
+      .profile-box.becoming-seller .steps .inactive-dot {
+        background-color: #ECECED; }
+      .profile-box.becoming-seller .steps .active-dot {
+        -webkit-box-shadow: 4px 4px 16px 0 rgba(50, 114, 192, 0.16);
+        box-shadow: 4px 4px 16px 0 rgba(50, 114, 192, 0.16);
+        background-color: #44AAED; }
+      .profile-box.becoming-seller .steps .bottom-text {
+        width: 100%;
+        font-weight: bold;
+        font-family: 'Lato', sans-serif;
+        position: relative;
+        margin-top: 20px; }
+        .profile-box.becoming-seller .steps .bottom-text .inactive {
+          color: #D5D5D8; }
+        .profile-box.becoming-seller .steps .bottom-text .active {
+          color: #464855; }
+        .profile-box.becoming-seller .steps .bottom-text .completed {
+          color: #44AAED; }
+        .profile-box.becoming-seller .steps .bottom-text .center {
+          width: 100%;
+          text-align: center; }
+        .profile-box.becoming-seller .steps .bottom-text .left {
+          position: absolute;
+          top: 0;
+          left: 14px; }
+          .profile-box.becoming-seller .steps .bottom-text .left.active {
+            color: #44AAED; }
+        .profile-box.becoming-seller .steps .bottom-text .right {
+          position: absolute;
+          top: 0;
+          right: 0; }
+    .profile-box.becoming-seller .section-header {
+      text-align: center;
+      margin-bottom: 60px; }
+    .profile-box.becoming-seller .section-description {
+      margin-top: 0;
+      margin-bottom: 40px;
+      width: 675px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 300;
+      font-size: 14px;
+      text-align: center;
+      line-height: 20px;
+      margin-bottom: 60px; }
+      .profile-box.becoming-seller .section-description a {
+        color: #44AAED;
+        font-weight: 500; }
+    .profile-box.becoming-seller form {
+      width: 400px;
+      margin: auto; }
+      .profile-box.becoming-seller form .label {
+        font-weight: 600;
+        font-size: 12px;
+        margin-bottom: 10px; }
+      .profile-box.becoming-seller form input[type="text"] {
+        width: 100%;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 4px;
+        font-family: Montserrat, Arial, sans-serif;
+        color: #464855;
+        font-size: 14px;
+        background-color: #F6F7F7;
+        padding: 0;
+        padding-left: 10px;
+        margin-bottom: 20px; }
+        .profile-box.becoming-seller form input[type="text"]:focus {
+          outline: none; }
+      .profile-box.becoming-seller form .submit-wrapper {
+        width: 195px;
+        margin: auto; }
+      .profile-box.becoming-seller form input[type="submit"] {
+        padding: 0;
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        background-color: #44AAED;
+        color: white;
+        text-align: center;
+        font-family: Montserrat, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        outline: none;
+        border-radius: 10px;
+        margin: auto; }
+        .profile-box.becoming-seller form input[type="submit"]:focus {
+          outline: none; }
+    .profile-box.becoming-seller .packages-wrapper {
+      overflow: auto;
+      width: 65%;
+      margin: auto;
+      padding-bottom: 20px; }
+    .profile-box.becoming-seller .package-container {
+      width: 32%;
+      margin-right: 2%;
+      float: left;
+      -webkit-box-shadow: 0 2px 6px 0 rgba(69, 73, 91, 0.08);
+      box-shadow: 0 2px 6px 0 rgba(69, 73, 91, 0.08); }
+      .profile-box.becoming-seller .package-container:nth-last-child(1) {
+        margin-right: 0; }
+      .profile-box.becoming-seller .package-container h1 {
+        text-align: center;
+        color: #44AAED;
+        margin-bottom: 20px; }
+      .profile-box.becoming-seller .package-container .package-description {
+        color: #B3B3B3;
+        font-size: 14px;
+        font-weight: 300;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 30px; }
+      .profile-box.becoming-seller .package-container .package-price {
+        color: #353535;
+        font-size: 48px;
+        letter-spacing: -0.5px;
+        text-align: center;
+        margin-bottom: 30px; }
+        .profile-box.becoming-seller .package-container .package-price span {
+          font-size: 18px; }
+      .profile-box.becoming-seller .package-container .benefits-wrapper {
+        width: 70%;
+        margin: auto; }
+      .profile-box.becoming-seller .package-container .package-benefit {
+        color: #363636;
+        font-size: 14px;
+        font-family: 'Lato', sans-serif;
+        margin-top: 0;
+        margin-bottom: 15px;
+        padding-left: 24px;
+        position: relative; }
+        .profile-box.becoming-seller .package-container .package-benefit:nth-last-child(1) {
+          margin-bottom: 30px; }
+        .profile-box.becoming-seller .package-container .package-benefit span {
+          position: absolute;
+          left: 0;
+          top: -8px;
+          color: #2ECC71;
+          font-size: 22px; }
+      .profile-box.becoming-seller .package-container .get-started-button {
+        height: 45px;
+        line-height: 45px;
+        width: 195px;
+        margin: auto;
+        font-size: 14px;
+        font-weight: 600;
+        color: white;
+        background-color: #44AAED;
+        border-radius: 10px;
+        text-align: center;
+        margin-bottom: 20px;
+        position: relative; }
+        .profile-box.becoming-seller .package-container .get-started-button a {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%; }
+    .profile-box.becoming-seller .notice-wrapper {
+      width: 65%;
+      margin: auto;
+      margin-bottom: 20px; }
+    .profile-box.becoming-seller .not-included {
+      font-weight: 500;
+      color: #7C7C7C;
+      font-size: 12px;
+      margin-top: 0;
+      margin-bottom: 20px; }
+    .profile-box.becoming-seller .notice {
+      font-weight: 300;
+      color: #717171;
+      font-size: 12px;
+      margin-top: 0;
+      margin-bottom: 4px; }
+    .profile-box.becoming-seller .plan-box {
+      width: 550px;
+      padding: 20px;
+      -webkit-box-shadow: 0 2px 6px 0 rgba(69, 73, 91, 0.08);
+      box-shadow: 0 2px 6px 0 rgba(69, 73, 91, 0.08);
+      margin: auto;
+      overflow: auto; }
+      .profile-box.becoming-seller .plan-box .plan-left, .profile-box.becoming-seller .plan-box .plan-right {
+        width: 50%;
+        float: left; }
+      .profile-box.becoming-seller .plan-box .plan-left {
+        font-family: 'Lato', sans-serif; }
+      .profile-box.becoming-seller .plan-box .plan-right {
+        height: 212px;
+        position: relative; }
+      .profile-box.becoming-seller .plan-box h1 {
+        margin-bottom: 30px; }
+      .profile-box.becoming-seller .plan-box .package-benefit {
+        color: #363636;
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 15px;
+        padding-left: 24px;
+        position: relative; }
+        .profile-box.becoming-seller .plan-box .package-benefit:nth-last-child(1) {
+          margin-bottom: 10px; }
+        .profile-box.becoming-seller .plan-box .package-benefit span {
+          position: absolute;
+          left: 0;
+          top: -8px;
+          color: #2ECC71;
+          font-size: 22px; }
+      .profile-box.becoming-seller .plan-box .plan-price {
+        font-weight: 600;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #353535;
+        font-size: 48px;
+        letter-spacing: -0.5px; }
+        .profile-box.becoming-seller .plan-box .plan-price span {
+          display: block;
+          font-size: 14px;
+          font-family: 'Lato', sans-serif;
+          font-weight: normal;
+          text-align: right; }
+      .profile-box.becoming-seller .plan-box .subscribe-button {
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        width: 195px;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        background-color: #44AAED;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 10px; }
+        .profile-box.becoming-seller .plan-box .subscribe-button a {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%; }
+    .profile-box.becoming-seller .payment-method-container {
+      width: 550px;
+      padding: 20px;
+      margin: auto; }
+      .profile-box.becoming-seller .payment-method-container .payment-method-header {
+        font-size: 14px;
+        font-weight: bold;
+        width: 200px;
+        position: relative;
+        cursor: pointer; }
+        .profile-box.becoming-seller .payment-method-container .payment-method-header .show-hide-button {
+          position: absolute;
+          top: 1px;
+          right: 0;
+          font-size: 12px; }
+      .profile-box.becoming-seller .payment-method-container .payment-method-content {
+        margin-top: 20px;
+        /* The container */
+        /* Hide the browser's default radio button */
+        /* Create a custom radio button */
+        /* On mouse-over, add a grey background color */
+        /* When the radio button is checked, add a blue background */
+        /* Create the indicator (the dot/circle - hidden when not checked) */
+        /* Show the indicator (dot/circle) when checked */
+        /* Style the indicator (dot/circle) */ }
+        .profile-box.becoming-seller .payment-method-container .payment-method-content .if-no-method {
+          font-weight: 300;
+          font-size: 14px;
+          display: none; }
+        .profile-box.becoming-seller .payment-method-container .payment-method-content .container {
+          display: block;
+          position: relative;
+          padding-left: 35px;
+          line-height: 23px;
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          font-size: 14px;
+          font-weight: 600;
+          margin-bottom: 20px;
+          width: 200px; }
+        .profile-box.becoming-seller .payment-method-container .payment-method-content .container input {
+          position: absolute;
+          opacity: 0;
+          top: 0;
+          left: 0;
+          width: 23px;
+          height: 23px;
+          margin: 0;
+          cursor: pointer; }
+        .profile-box.becoming-seller .payment-method-container .payment-method-content .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 21px;
+          width: 21px;
+          background-color: white;
+          border: 1px solid #D5D5D8;
+          border-radius: 21px; }
+        .profile-box.becoming-seller .payment-method-container .payment-method-content .container:hover input ~ .checkmark {
+          background-color: #E1EDF7; }
+        .profile-box.becoming-seller .payment-method-container .payment-method-content .container input:checked ~ .checkmark {
+          background-color: #44AAED; }
+        .profile-box.becoming-seller .payment-method-container .payment-method-content .checkmark:after {
+          content: "\2713";
+          position: absolute;
+          display: none; }
+        .profile-box.becoming-seller .payment-method-container .payment-method-content .container input:checked ~ .checkmark:after {
+          display: block; }
+        .profile-box.becoming-seller .payment-method-container .payment-method-content .container .checkmark:after {
+          font-size: 14px;
+          font-weight: bold;
+          top: 0;
+          left: 5px;
+          color: white; }
 
-/* === Mobile Styles === */
-.profile-box.mobile-purchase-box h2 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  overflow-wrap: break-word; }
+/* === MOBILE SYLES === */
+.mobile-packages-slick .slick-slide {
+  outline: none !important; }
+  .mobile-packages-slick .slick-slide a {
+    outline: none !important; }
 
-.profile-box.mobile-purchase-box h3 {
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 4px; }
-  .profile-box.mobile-purchase-box h3 span {
-    font-weight: 300; }
+.mobile-packages-slick .slick-arrow {
+  display: none !important; }
 
-.profile-box.mobile-purchase-box .purchase-left {
-  width: 86px;
-  position: relative;
-  height: 201px;
-  margin-right: 15px; }
+.mobile-packages-slick .slick-dots li.slick-active button:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: 5px;
+  border-radius: 20px;
+  background: #44aaed;
+  background: -moz-linear-gradient(45deg, #44aaed 0%, #4464ed 100%);
+  background: -webkit-linear-gradient(45deg, #44aaed 0%, #4464ed 100%);
+  background: -o-linear-gradient(45deg, #44aaed 0%, #4464ed 100%);
+  background: linear-gradient(45deg, #44aaed 0%, #4464ed 100%); }
 
-.profile-box.mobile-purchase-box .purchase-right {
-  width: 308px;
-  height: 201px;
-  position: relative; }
-
-.profile-box.mobile-purchase-box .item-img {
-  float: left;
-  background-image: url("../img/sample-product2.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  width: 86px;
-  height: 78px;
-  border-radius: 8px; }
-
-.profile-box.mobile-purchase-box .mail-icon, .profile-box.mobile-purchase-box .star-icon {
-  width: 28px;
-  height: 28px;
-  background-color: #E1EEF5;
-  -webkit-box-shadow: 1px 0 0 0 #FFFFFF;
-  box-shadow: 1px 0 0 0 #FFFFFF;
-  border-radius: 4px;
-  background-size: 16px 16px;
-  background-position: center;
-  background-repeat: no-repeat; }
-  .profile-box.mobile-purchase-box .mail-icon a, .profile-box.mobile-purchase-box .star-icon a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
-
-.profile-box.mobile-purchase-box .mail-icon {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-image: url("../img/messages-active.png"); }
-
-.profile-box.mobile-purchase-box .star-icon {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background-image: url("../img/purchases-star.png"); }
-
-.profile-box.mobile-purchase-box .item-date {
-  font-weight: 300;
-  font-size: 14px;
-  margin-top: 0;
-  margin-bottom: 10px; }
-
-.profile-box.mobile-purchase-box .view-order {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: #E1EEF5;
-  -webkit-box-shadow: 1px 0 0 0 #FFFFFF;
-  box-shadow: 1px 0 0 0 #FFFFFF;
-  border-radius: 4px;
-  color: #44AAED;
-  font-size: 12px;
-  width: 100%;
-  height: 28px;
-  line-height: 28px; }
-  .profile-box.mobile-purchase-box .view-order .view-text {
-    padding-left: 15px; }
-  .profile-box.mobile-purchase-box .view-order .arrow {
-    position: absolute;
-    font-weight: normal;
-    font-size: 26px;
-    right: 15px;
-    top: -2px; }
-  .profile-box.mobile-purchase-box .view-order a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
-
-.profile-box.mobile-purchase-box div {
-  float: left; }
-
-/* Uses similar styles to #products-header {li{}} in style.scss. A lot of styles could be combined */
-.profile-options-slick {
-  margin-bottom: 20px;
-  overflow: hidden; }
-  .profile-options-slick .slick-slide {
-    margin-left: 0px; }
-  .profile-options-slick .slick-list {
-    margin-left: 20px; }
-  .profile-options-slick .slick-arrow {
-    display: none !important; }
-  .profile-options-slick li {
-    list-style-type: none;
-    display: inline-block;
-    padding-left: 7px;
-    padding-right: 7px;
-    text-align: center;
-    border-bottom: 1px solid #dbdbdb;
-    padding-bottom: 10px;
-    font-size: 16px;
-    -webkit-transition: border-color 0.5s;
-    -o-transition: border-color 0.5s;
-    transition: border-color 0.5s; }
-    .profile-options-slick li img {
-      height: 16px;
-      margin-right: 10px;
-      display: inline-block; }
-    .profile-options-slick li:hover {
-      border-color: #44AAED;
-      border-width: 3px;
-      padding-bottom: 9px; }
-
-.log-out-mobile {
-  height: 60px;
-  line-height: 60px;
-  width: 100%;
-  background-color: #ECECED;
-  color: #464855;
-  text-align: center;
-  font-weight: 600;
-  position: relative; }
-  .log-out-mobile img {
-    height: 16px;
-    margin-right: 20px; }
-  .log-out-mobile a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
+.mobile-packages-slick .slick-dots li button:before {
+  opacity: 1;
+  content: "";
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: 5px;
+  border-radius: 20px;
+  background-color: #DAE7FC; }
 
 /* === MEDIA QUERIES === */
 @media only screen and (max-width: 1510px) {
   #profile {
     width: 950px; }
-  .profile-left {
-    width: 190px; }
-  .profile-ad {
-    height: 158px; }
-  .profile-right {
-    width: 740px; }
-  .profile-box {
-    width: 700px; }
-    .profile-box.purchases h2 {
-      font-size: 16px; }
-    .profile-box.purchases .purchased-item-box .item-icons div {
-      margin-right: 10px; } }
+  .profile-box.becoming-seller .packages-wrapper {
+    width: 90%; }
+  .profile-box.becoming-seller .notice-wrapper {
+    width: 90%; } }
 
 @media only screen and (max-width: 965px) {
   #profile {
-    width: 100%; }
-  .verify-email-banner {
-    width: 740px;
-    margin-left: auto;
-    margin-right: auto; }
-  .profile-right {
-    clear: both;
-    float: none;
-    margin: auto; } }
+    width: 730px; }
+  .profile-box.becoming-seller .packages-wrapper {
+    width: 100%; } }
 
 @media only screen and (max-width: 750px) {
   .mobile-hidden-750 {
     display: none; }
   .desktop-hidden-750 {
     display: block; }
-  .verify-email-banner {
-    line-height: normal;
-    width: 410px;
-    height: 60px;
-    display: table; }
-    .verify-email-banner span {
-      display: table-cell;
-      vertical-align: middle; }
-  .profile-right {
-    width: 450px; }
+  #profile {
+    width: 100%; }
   .profile-box {
-    width: 410px; } }
+    width: 410px; }
+    .profile-box.becoming-seller {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border-radius: 0; }
+      .profile-box.becoming-seller .section-description {
+        width: 90%; }
+      .profile-box.becoming-seller .steps {
+        width: 310px; }
+        .profile-box.becoming-seller .steps .top {
+          width: 272px; }
+        .profile-box.becoming-seller .steps .active-step, .profile-box.becoming-seller .steps .inactive-step {
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          font-size: 16px; }
+        .profile-box.becoming-seller .steps .first {
+          margin-right: 8px; }
+        .profile-box.becoming-seller .steps .second {
+          margin-left: 8px;
+          margin-right: 8px; }
+        .profile-box.becoming-seller .steps .third {
+          margin-left: 8px; }
+        .profile-box.becoming-seller .steps .inactive-dot, .profile-box.becoming-seller .steps .active-dot {
+          margin-top: 12px;
+          margin-left: 5px;
+          margin-right: 5px;
+          width: 5px;
+          height: 5px; }
+        .profile-box.becoming-seller .steps .bottom-text {
+          font-size: 12px; }
+          .profile-box.becoming-seller .steps .bottom-text .left {
+            left: 2px; }
+      .profile-box.becoming-seller .package-container {
+        width: 292px;
+        margin-right: 20px;
+        background: #44aaed;
+        background: -moz-linear-gradient(45deg, #44aaed 0%, #4464ed 100%);
+        background: -webkit-linear-gradient(45deg, #44aaed 0%, #4464ed 100%);
+        background: -o-linear-gradient(45deg, #44aaed 0%, #4464ed 100%);
+        background: linear-gradient(45deg, #44aaed 0%, #4464ed 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#44aaed",endColorstr="#4464ed",GradientType=1);
+        transition-duration: 400ms;
+        -ms-transition-duration: 400ms;
+        -webkit-transition-duration: 400ms;
+        -o-transition-duration: 400ms;
+        -moz-transition-duration: 400ms;
+        transform: scale(0.8, 0.8);
+        -ms-transform: scale(0.8, 0.8);
+        /* IE 9 */
+        -webkit-transform: scale(0.8, 0.8);
+        /* Safari and Chrome */
+        -o-transform: scale(0.8, 0.8);
+        /* Opera */
+        -moz-transform: scale(0.8, 0.8);
+        /* Firefox */ }
+        .profile-box.becoming-seller .package-container h1, .profile-box.becoming-seller .package-container .package-description, .profile-box.becoming-seller .package-container .package-price, .profile-box.becoming-seller .package-container .package-benefit {
+          color: white; }
+        .profile-box.becoming-seller .package-container h1 {
+          margin-top: 30px; }
+        .profile-box.becoming-seller .package-container .package-benefit span {
+          color: white; }
+        .profile-box.becoming-seller .package-container .get-started-button {
+          color: #44AAED;
+          background-color: white;
+          margin-bottom: 30px; }
+        .profile-box.becoming-seller .package-container.slick-current {
+          transform: scale(1, 1);
+          -ms-transform: scale(1, 1);
+          /* IE 9 */
+          -webkit-transform: scale(1, 1);
+          /* Safari and Chrome */
+          -o-transform: scale(1, 1);
+          /* Opera */
+          -moz-transform: scale(1, 1);
+          /* Firefox */ }
+      .profile-box.becoming-seller .notice-wrapper {
+        padding-top: 40px;
+        width: 90%;
+        text-align: center; }
+      .profile-box.becoming-seller .notice {
+        font-size: 10px; }
+      .profile-box.becoming-seller .plan-box {
+        padding: 0;
+        margin: auto;
+        width: 90%; }
+        .profile-box.becoming-seller .plan-box .plan-left, .profile-box.becoming-seller .plan-box .plan-right {
+          float: none;
+          clear: both;
+          margin-left: auto;
+          margin-right: auto; }
+        .profile-box.becoming-seller .plan-box .plan-left {
+          width: 240px;
+          margin-bottom: 30px; }
+          .profile-box.becoming-seller .plan-box .plan-left h1 {
+            text-align: center; }
+        .profile-box.becoming-seller .plan-box .plan-right {
+          width: 240px;
+          height: auto; }
+        .profile-box.becoming-seller .plan-box .plan-price {
+          position: static;
+          text-align: center;
+          margin-bottom: 30px; }
+          .profile-box.becoming-seller .plan-box .plan-price span {
+            text-align: center; }
+        .profile-box.becoming-seller .plan-box .subscribe-button {
+          position: relative;
+          margin: auto;
+          margin-bottom: 20px; }
+      .profile-box.becoming-seller .payment-method-container {
+        padding: 0;
+        width: 90%;
+        margin: auto;
+        margin-top: 30px; }
+  .becoming-seller-banner {
+    border-radius: 0; }
+    .becoming-seller-banner div {
+      width: 90%;
+      padding-left: 5%;
+      padding-right: 5%; } }
 
 @media only screen and (max-width: 460px) {
-  .profile-options-slick .slick-list {
-    margin-left: 0; }
-  .verify-email-banner {
-    width: 90%;
-    height: 75px; }
-  .purchases-header {
-    margin-left: 8px; }
-  .profile-right {
-    width: 100%; }
-  .profile-box.mobile-purchase-box {
-    width: 100%; }
-    .profile-box.mobile-purchase-box .item-img {
-      width: 75px;
-      height: 67px; }
-    .profile-box.mobile-purchase-box h2 {
-      font-size: 16px; }
-    .profile-box.mobile-purchase-box h3 {
-      font-size: 12px; }
-    .profile-box.mobile-purchase-box .item-date {
-      font-size: 12px; }
-    .profile-box.mobile-purchase-box .purchase-left {
-      width: 24%; }
-    .profile-box.mobile-purchase-box .purchase-right {
-      width: 65%;
-      margin-right: 15px; }
-    .profile-box.mobile-purchase-box .view-order {
-      width: 95%; }
-  .purchases-navigation {
-    padding-left: 5px;
-    padding-right: 5px; }
-    .purchases-navigation .items-per-page li {
-      margin-right: 2px; }
-    .purchases-navigation .items-per-page .num-items {
-      font-size: 10px;
-      width: 20px;
-      height: 20px;
-      line-height: 20px; }
-    .purchases-navigation .page-nav {
-      margin-top: 10px; }
-      .purchases-navigation .page-nav li {
-        margin-right: 2px; }
-      .purchases-navigation .page-nav div {
-        width: 20px;
-        height: 20px;
-        line-height: 20px;
-        font-size: 11px; }
-  .log-out-mobile {
-    width: 90%;
-    margin: auto; } }
+  .profile-box.becoming-seller form {
+    width: 90%; }
+  .profile-box.becoming-seller .package-container {
+    width: 230px;
+    margin-right: 10px; }
+    .profile-box.becoming-seller .package-container .get-started-button {
+      width: 150px; } }

@@ -16,7 +16,7 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
 		
 		<!-- Custom CSS -->
-		<link href="assets/css/order-details.css" rel = "stylesheet">
+		<link href="assets/css/checkout.css" rel = "stylesheet">
 		
 		<!-- HTML 5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
 		
@@ -88,58 +88,36 @@
 		<section id = "profile-container">
 			<div id = "profile">
 				
-				<!-- PROFILE OPTIONS (MOBILE ONLY) -->
-				<div class = "profile-options-slick desktop-hidden">
-					<a href = "#"><li><img src = "assets/img/my-profile.png">My Profile</li></a>
-					<a href = "#"><li><img src = "assets/img/messages.png">Messages</li></a>
-					<a href = "#"><li id = "active-category"><img src = "assets/img/purchases-active.png">Purchases</li></a>
-					<a href = "#"><li><img src = "assets/img/help.png">Help</li></a>
-				</div><!-- PROFILE OPTIONS -->
-				
-				<!-- VERIFY EMAIL BANNER -->
-				<div class = "verify-email-banner">
-					<span>Welcome to SheepBuy! Please <a href = "#">verify your email</a> to complete registration and enable purchasing and selling features.</span>
+				<!-- CHECKOUT BANNER -->
+				<div class = "checkout-banner">
+					<div>
+						<p class = "banner-header">Your order is reserved for <span>9:50</span> minutes. If timer elapses before you complete your purchase, you will be redirected to the listing</p>
+						<p>If you pay for the item after your alloted time has expired and the item is no longer available, a complete refund will be issued. Please read our <a href = "#">FAQ</a> for more informartion. </p>
+					</div>
 				</div><!-- end verify email banner -->
 				
-				<!-- PROFILE SIDEBAR (DESKTOP ONLY) -->
-				<div class = "profile-left mobile-hidden">
-					<div class = "profile-sidebar">
-						<div class = "my-profile"><img src = "assets/img/my-profile.png"><a href = "#"></a>My Profile</div>
-						<div class = "messages"><img src = "assets/img/messages.png"><a href = "#"></a>Messages</div>
-						<div class = "purchases active"><img src = "assets/img/purchases-active.png"><a href = "#"></a>Purchases</div>
-						<div class = "help"><img src = "assets/img/help.png"><a href = "#"></a>Help</div>
-						<div class = "log-out"><img src = "assets/img/log-out.png"><a href = "#"></a>Log Out</div>
-					</div>
-					<div class = "profile-ad"></div>
-				</div><!-- end profile sidebar (desktop only) -->
+				<!-- CHECKOUT CONTENT -->
+				<div class = "profile-right checkout">
 				
-				<!-- PURCHASES CONTENT -->
-				<div class = "profile-right">
-				
-					<!-- ORDER DETAILS -->
-					<div class = "purchases-header"><h1>Items Purchased</h1></div>
-					<div class = "profile-box order-details">
-						<div class = "order-number">Purchase Order #28</div><div class = "order-date">Date: <span>07/24/2019</span></div>
+					<!-- CHECKOUT -->
+					<div class = "checkout-header"><h1>Review Your Order</h1></div>
+					<div class = "profile-box checkout">
 						
-						<div class = "float-clear"></div>
-						
-						<!-- LEFT ORDER BOX -->
-						<div class = "order-box left">
-							<h3>Buyer Information</h3>
-							<div class = "divider"></div>
-							<p>JohnDoe002</p>
-						</div><!-- end order box -->
-						
-						<!-- RIGHT ORDER BOX -->
-						<div class = "order-box right">
-							<h3>Shipping Address</h3>
-							<div class = "divider"></div>
+						<!-- SHIPPING BOX -->
+						<h3><span>1.</span>Shipping Address</h3>
+						<div class = "shipping-box">
+							<div class = "subject-select"><select>
+								<option value="0">Primary Address</option>
+								<option value="1">Primary Address</option>
+								<option value="2">Secondary Address</option>
+							</select></div>
 							<p>John Doe</p>
 							<p>301 NW 11th St</p>
 							<p>San Francisco, CA, 5011</p>
-						</div><!-- end order box -->
+						</div><!-- end shipping box -->
 						
-						<!-- PURCHASED ITEM BOX -->
+						<!-- REVIEW AND PAY -->
+						<h3 class = "header-review"><span>2.</span>Review and pay</h3><div class = "review-mobile-spacing"></div><h3 class = "header-price mobile-hidden-750">Price</h3><h3 class = "header-quantity">Quantity</h3><h3 class = "header-subtotal">Subtotal</h3>
 						<div class = "purchased-item-box">
 							<div class = "img-info-wrapper">
 								<!-- ITEM IMG -->
@@ -148,45 +126,56 @@
 								<!-- ITEM INFO -->
 								<div class = "item-info">
 									<h2 class = "item-name">Troy Bilt Mower, only used once</h2>
-									<p class = "item-seller">Seller: <span>jdoe002</span></p>
-									<p class = "item-status">Condition: <span>New</span></p>
+									<p class = "item-seller mobile-hidden-750">Seller: <span>jdoe002</span></p>
+									<p class = "item-status mobile-hidden-750">Condition: <span>New</span></p>
 								</div><!-- end item info -->
 							</div>
 							
-							<!-- ITEM COST -->
-							<div class = "item-cost">
-								<p>Quantity<span>1</span></p>
-								<p>Price<span>$400</span></p>
-								<p>Subtotal<span>$400</span></p>
-								<p>Shipping<span>$89</span></p>
-								<div class = "divider"></div>
-								<h2>Total<span>$489</span></h2>
-							</div><!-- end item cost -->
-						</div><!-- end purchased item box -->
+							<!-- ITEM PRICE -->
+							<div class = "item-price mobile-hidden-750">
+								$400.00
+							</div><!-- end item price -->
+							
+							<!-- ITEM QUANTITY -->
+							<div class = "item-quantity">
+								<input type = "number">
+							</div><!-- end item quantity -->
+							
+							<!-- ITEM SUBTOTAL -->
+							<div class = "item-subtotal">
+								$400.00
+							</div><!-- end item subtotal -->
+							
+						</div><!-- end review and pay -->
 						
-						<!-- DESCRIPTION -->
-						<div class = "description-box">
-							<h1>Description</h1>
-							<p>CoolMax inserts across the knuckle and between the fingers for the best possible fit.</p>
-							<p>Easy to fasten velcro strap.</p>
-							<p>Left handed glove for the right handed golfer</p>
-							<p>Ball marker on the wrist</p>
-							<p>Leather palm patch which improves grip and durability</p>
-							<p>Amazon has this glove selling for 14.90 dlls.</p>
-							<p>I am clearing storage space, husband never used, selling for $11.00 shipping included.</p>
-						</div><!-- end description -->
+						<!-- TOTAL -->
+						<div class = "checkout-total">
+							<p>Quantity<span>1</span></p>
+							<p>Price<span>$400</span></p>
+							<p>Subtotal<span>$400</span></p>
+							<p>Shipping<span>$89</span></p>
+							<div class = "divider"></div>
+							<h2>Total<span>$489</span></h2>
+						</div><!-- end total -->
 						
-						<!-- RETURN POLICY -->
-						<div class = "description-box">
-							<h1>Return Policy</h1>
-							<p>Item is too inexpensive and considering I'm shipping for free I cannot accept returns, refunds and or exchanges.</p>
-						</div><!-- end return policy -->
+						<!-- CANCEL/PAY -->
+						<div class = "checkout-cancel-pay">
+							<div class = "cancel-order mobile-hidden-750"><a href = "#">Cancel Order</a></div>
+							<div class = "paypal"><a href = "#"></a></div>
+							<div class = "cancel-order desktop-hidden-750"><a href = "#">Cancel Order</a></div>
+						</div><!-- end cancel/pay -->
 						
-					</div><!-- end order details -->
+					</div><!-- end checkout -->
+					
+					<!-- BOTTOM TEXT -->
+					<div class = "checkout-bottom-text">
+							Tincidunt praesent semper feugiat nibh sed. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Mattis nunc sed blandit libero volutpat sed cras. Nisi eu ultrices vitae auctor. At erat pellentesque adipiscing commodo elit at imperdiet dui.
+					</div><!--end bottom text -->
 					
 				</div><!-- end profile content -->
 			</div>
-		</section><!-- end products section -->
+			
+		</section><!-- end profile section -->
 		
 		
 		<!-- FOOTER
@@ -293,6 +282,7 @@
 			div2.innerHTML = "<!--[if lt IE 8]><i></i><![endif]-->";
 			var isIeLessThan8 = (div2.getElementsByTagName("i").length == 1);
 			if (isIeLessThan8) {
+				$('.subject-select > select').css('display', 'block');
 				$('.custom-select > select').css('display', 'block');
 				$('.custom-select > select').css('height', '100%');
 				$('.custom-select > select').css('width', '100%');
@@ -394,6 +384,104 @@
 					closeAllSelect(this);
 					$('#search-bar > form > .custom-select > .select-items').toggleClass("select-hide");
 					$('#search-bar > form > .custom-select > .select-selected').toggleClass("select-arrow-active");
+				  });
+			  }
+			}
+			
+			/* === CUSTOM SELECT FOR ADDRESS SELECT === */
+			var subjectX, subjectI, subjectJ, subjectSelElmnt, subjectA, subjectB, subjectC;
+			/* Look for any elements with the class "subject-select": */
+			subjectX = $(".subject-select");
+			for (subjectI = 0; subjectI < subjectX.length; subjectI++) {
+			  subjectSelElmnt = subjectX[subjectI].getElementsByTagName("select")[0];
+			  /* For each element, create a new DIV that will act as the selected item: */
+			  subjectA = document.createElement("DIV");
+			  subjectA.setAttribute("class", "select-selected");
+			  subjectA.innerHTML = subjectSelElmnt.options[subjectSelElmnt.selectedIndex].innerHTML;
+			  subjectX[subjectI].appendChild(subjectA);
+			  /* For each element, create a new DIV that will contain the option list: */
+			  subjectB = document.createElement("DIV");
+			  subjectB.setAttribute("class", "select-items select-hide");
+			  for (subjectJ = 1; subjectJ < subjectSelElmnt.length; subjectJ++) {
+				/* For each option in the original select element,
+				create a new DIV that will act as an option item: */
+				subjectC = document.createElement("DIV");
+				subjectC.innerHTML = subjectSelElmnt.options[subjectJ].innerHTML;
+				if (!subjectC.addEventListener){
+					subjectC.attachEvent("onclick", function(e) {
+						/* When an item is clicked, update the original select box,
+						and the selected item: */
+						var caller = e.target || e.srcElement || window.event.target || window.event.srcElement;
+						var subjectY, subjectI, subjectK, subjectS, subjectH;
+						subjectS = $('.subject-select > select')[0];
+						subjectH = $('.subject-select > .select-selected');
+						for (subjectI = 0; subjectI < subjectS.length; subjectI++) {
+						  if (subjectS.options[subjectI].innerHTML == caller.innerHTML) {
+							subjectS.selectedIndex = subjectI;
+							subjectH.html(caller.innerHTML);
+							subjectY = $('.subject-select > .select-items > .same-as-selected')[0];
+							$(subjectY).toggleClass("same-as-selected");
+							$(caller).addClass("same-as-selected");
+							break;
+						  }
+						}
+						subjectH.click();
+					});
+				}
+				else{
+					subjectC.addEventListener("click", function(e) {
+						/* When an item is clicked, update the original select box,
+						and the selected item: */
+						var subjectY, subjectI, subjectK, subjectS, subjectH;
+						subjectS = this.parentNode.parentNode.getElementsByTagName("select")[0];
+						subjectH = this.parentNode.previousSibling;
+						for (subjectI = 0; subjectI < subjectS.length; subjectI++) {
+						  if (subjectS.options[subjectI].innerHTML == this.innerHTML || subjectS.options[subjectI].getAttribute('data-abbr') == this.innerHTML) {
+							subjectS.selectedIndex = subjectI;
+							subjectH.innerHTML = this.innerHTML;
+							subjectY = this.parentNode.querySelectorAll(".same-as-selected");
+							for (subjectK = 0; subjectK < subjectY.length; subjectK++) {
+							  subjectY[subjectK].removeAttribute("class");
+							}
+							this.setAttribute("class", "same-as-selected");
+							break;
+						  }
+						}
+						subjectH.click();
+					});
+				}
+				subjectB.appendChild(subjectC);
+			  }
+			  
+			  subjectX[subjectI].appendChild(subjectB);
+			  if(!subjectA.addEventListener){
+				subjectA.attachEvent("onclick", function(e) {
+					/* When the select box is clicked, close any other select boxes,
+					and open/close the current select box: */
+					if(e.stopPropagation){
+						e.stopPropagation();
+					}
+					else{
+						e.cancelBubble=true;
+					}
+					closeAllSelect(this);
+					$('.subject-select > .select-items').toggleClass("select-hide");
+					$('.subject-select > .select-selected').toggleClass("select-arrow-active");
+				  });
+			  }
+			  else{
+				subjectA.addEventListener("click", function(e) {
+					/* When the select box is clicked, close any other select boxes,
+					and open/close the current select box: */
+					if(e.stopPropagation){
+						e.stopPropagation();
+					}
+					else{
+						e.cancelBubble=true;
+					}
+					closeAllSelect(this);
+					$('.subject-select > .select-items').toggleClass("select-hide");
+					$('.subject-select > .select-selected').toggleClass("select-arrow-active");
 				  });
 			  }
 			}

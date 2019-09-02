@@ -10,19 +10,20 @@
 		
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,800|Nunito&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet">
 		
 		<!-- Slick Carousel CSS -->
 		<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
 		
 		<!-- Custom CSS -->
-		<link href="assets/css/order-details.css" rel = "stylesheet">
+		<link href="assets/css/becoming-a-seller.css" rel = "stylesheet">
 		
 		<!-- HTML 5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
 		
 		<!--[if lt IE 9]>
 		<script src = "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"</script>
-		<script src = "https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script>"
+		<script src = "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 		
 	</head>
@@ -88,105 +89,67 @@
 		<section id = "profile-container">
 			<div id = "profile">
 				
-				<!-- PROFILE OPTIONS (MOBILE ONLY) -->
-				<div class = "profile-options-slick desktop-hidden">
-					<a href = "#"><li><img src = "assets/img/my-profile.png">My Profile</li></a>
-					<a href = "#"><li><img src = "assets/img/messages.png">Messages</li></a>
-					<a href = "#"><li id = "active-category"><img src = "assets/img/purchases-active.png">Purchases</li></a>
-					<a href = "#"><li><img src = "assets/img/help.png">Help</li></a>
-				</div><!-- PROFILE OPTIONS -->
-				
-				<!-- VERIFY EMAIL BANNER -->
-				<div class = "verify-email-banner">
-					<span>Welcome to SheepBuy! Please <a href = "#">verify your email</a> to complete registration and enable purchasing and selling features.</span>
+				<!-- BANNER -->
+				<div class = "becoming-seller-banner">
+					<div>You must be a registered seller to list an item. Start selling today, use this form to begin your registration as a seller.</div>
 				</div><!-- end verify email banner -->
 				
-				<!-- PROFILE SIDEBAR (DESKTOP ONLY) -->
-				<div class = "profile-left mobile-hidden">
-					<div class = "profile-sidebar">
-						<div class = "my-profile"><img src = "assets/img/my-profile.png"><a href = "#"></a>My Profile</div>
-						<div class = "messages"><img src = "assets/img/messages.png"><a href = "#"></a>Messages</div>
-						<div class = "purchases active"><img src = "assets/img/purchases-active.png"><a href = "#"></a>Purchases</div>
-						<div class = "help"><img src = "assets/img/help.png"><a href = "#"></a>Help</div>
-						<div class = "log-out"><img src = "assets/img/log-out.png"><a href = "#"></a>Log Out</div>
-					</div>
-					<div class = "profile-ad"></div>
-				</div><!-- end profile sidebar (desktop only) -->
-				
-				<!-- PURCHASES CONTENT -->
+				<!-- BECOMING A SELLER CONTENT -->
 				<div class = "profile-right">
 				
-					<!-- ORDER DETAILS -->
-					<div class = "purchases-header"><h1>Items Purchased</h1></div>
-					<div class = "profile-box order-details">
-						<div class = "order-number">Purchase Order #28</div><div class = "order-date">Date: <span>07/24/2019</span></div>
+					<!-- PAYMENT METHODS PROFILE BOX -->
+					<div class = "profile-box becoming-seller">
+						<h1 class = "seller-header">Becoming a Seller</h1>
 						
-						<div class = "float-clear"></div>
-						
-						<!-- LEFT ORDER BOX -->
-						<div class = "order-box left">
-							<h3>Buyer Information</h3>
-							<div class = "divider"></div>
-							<p>JohnDoe002</p>
-						</div><!-- end order box -->
-						
-						<!-- RIGHT ORDER BOX -->
-						<div class = "order-box right">
-							<h3>Shipping Address</h3>
-							<div class = "divider"></div>
-							<p>John Doe</p>
-							<p>301 NW 11th St</p>
-							<p>San Francisco, CA, 5011</p>
-						</div><!-- end order box -->
-						
-						<!-- PURCHASED ITEM BOX -->
-						<div class = "purchased-item-box">
-							<div class = "img-info-wrapper">
-								<!-- ITEM IMG -->
-								<div class = "item-img"></div>
-								
-								<!-- ITEM INFO -->
-								<div class = "item-info">
-									<h2 class = "item-name">Troy Bilt Mower, only used once</h2>
-									<p class = "item-seller">Seller: <span>jdoe002</span></p>
-									<p class = "item-status">Condition: <span>New</span></p>
-								</div><!-- end item info -->
+						<!-- STEPS -->
+						<div class = "steps">
+							<div class = "top">
+								<div class = "active-step first">1</div>
+								<div class = "inactive-dot"></div>
+								<div class = "inactive-dot"></div>
+								<div class = "inactive-dot"></div>
+								<div class = "inactive-dot"></div>
+								<div class = "inactive-dot"></div>
+								<div class = "inactive-step second">2</div>
+								<div class = "inactive-dot"></div>
+								<div class = "inactive-dot"></div>
+								<div class = "inactive-dot"></div>
+								<div class = "inactive-dot"></div>
+								<div class = "inactive-dot"></div>
+								<div class = "inactive-step third">3</div>
 							</div>
+							<div class = "bottom-text">
+								<span class = "active left">Verify Seller</span>
+								<div class = "inactive center">Choose Your Plan</div>
+								<span class = "inactive right">Confirm and Pay</span>
+							</div>
+						</div><!-- end steps -->
+						
+						<!-- VERIFY PAYPAL HEADER/DESCRIPTION -->
+						<h1 class = "section-header">Verify PayPal Account</h1>
+						<p class = "section-description">The first step in becoming a seller is confirming that you have a <a href = "#">Bank Verified Paypal Account.</a><br><br>This where you will be receiving your funds when you make sale. All sales are between you and the buyer, no extra charges or final fees are added yo your sale.</p>
+						
+						<!-- INPUT FORM -->
+						<form>
+							<div class = "label">PayPal E-mail</div>
+							<input type = "text">
 							
-							<!-- ITEM COST -->
-							<div class = "item-cost">
-								<p>Quantity<span>1</span></p>
-								<p>Price<span>$400</span></p>
-								<p>Subtotal<span>$400</span></p>
-								<p>Shipping<span>$89</span></p>
-								<div class = "divider"></div>
-								<h2>Total<span>$489</span></h2>
-							</div><!-- end item cost -->
-						</div><!-- end purchased item box -->
+							<div class = "label">PayPal First Name</div>
+							<input type = "text">
+							
+							<div class = "label">PayPal Last Name</div>
+							<input type = "text">
+							
+							<div class = "submit-wrapper"><input type = "submit" value = "Next"></div>
+							
+						</form><!-- end form -->
 						
-						<!-- DESCRIPTION -->
-						<div class = "description-box">
-							<h1>Description</h1>
-							<p>CoolMax inserts across the knuckle and between the fingers for the best possible fit.</p>
-							<p>Easy to fasten velcro strap.</p>
-							<p>Left handed glove for the right handed golfer</p>
-							<p>Ball marker on the wrist</p>
-							<p>Leather palm patch which improves grip and durability</p>
-							<p>Amazon has this glove selling for 14.90 dlls.</p>
-							<p>I am clearing storage space, husband never used, selling for $11.00 shipping included.</p>
-						</div><!-- end description -->
-						
-						<!-- RETURN POLICY -->
-						<div class = "description-box">
-							<h1>Return Policy</h1>
-							<p>Item is too inexpensive and considering I'm shipping for free I cannot accept returns, refunds and or exchanges.</p>
-						</div><!-- end return policy -->
-						
-					</div><!-- end order details -->
+					</div><!-- end profile box -->
 					
-				</div><!-- end profile content -->
+				</div><!-- end becoming a seller content -->
+				
 			</div>
-		</section><!-- end products section -->
+		</section><!-- end profile section -->
 		
 		
 		<!-- FOOTER
@@ -451,17 +414,7 @@
 			}
 			
 			
-			
-			
-			
 			$(document).ready(function(){
-				/* === PROFILE OPTIONS SLICK == */
-				$('.profile-options-slick').slick({
-					infinite: false,
-					variableWidth: true,
-					slidesToScroll: 2,
-					swipeToSlide: true
-				});
 				
 				// Adds drop-down abbreviation attributes
 				createAttr();
@@ -489,6 +442,7 @@
 				else{
 					revertSelect();
 				}
+				
 			}
 			
 			//Adds drop-down abbreviation attributes
@@ -528,7 +482,6 @@
 					}
 				});
 			}
-			
 			
 			}//End else (code for modern browsers)
 		</script>

@@ -1,0 +1,729 @@
+/* Colors */
+$dark: #161616;
+$sheep_blue: #44AAED;
+$heading_color: #464855;
+$item_category_text: #898EA2;
+$product_shipping_text: #7C7D81;
+$description_text: #90929D;
+$package_title_text: #3DA7ED;
+$package_price_text: #353535;
+$package_details_text: #363636;
+$search_category_gray: #F6F7F7;
+$search_category_highlight: rgba(0, 0, 0, 0.1);
+$search_magnifier_background: #ECF6FD;
+$products_packages_containers_background: #F5F6F8;
+$browse_more_background: #EBF1F7;
+
+/* Fonts */
+$nunito: Nunito, Arial, sans-serif;
+$montserrat: Montserrat, Arial, sans-serif;
+
+/* Borders */
+$select_box_border: #D8D9DB transparent transparent transparent;
+$select_arrow_border: transparent transparent #D8D9DB transparent;
+
+@import 'style.scss';
+
+/* === MY PROFILE === */
+
+/* Same styles as product-container in style.scss. Can be put together and given the same name */
+#profile-container {
+	width: 100%;
+	padding-bottom: 50px;
+	background-color: $products_packages_containers_background;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+/* Could be moved (along with #mobile-login-register below) to style.scss. Probably add a class like "logged-in" for when the user is logged in and add these specific styles with &.logged-in{} in style.scss */
+#login-register, #mobile-login-register{
+	position: relative;
+	span{
+		font-weight: bold;
+		margin-left: 0px;
+		margin-right: 0px;
+		a{
+			font-weight: normal;
+			color: $sheep_blue;
+			margin-left: 20px;
+			margin-right: 22px;
+		}
+	}
+	img{
+		height: 15px;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+.desktop-hidden-750{
+	display: none;
+}
+
+#mobile-login-register{
+	span{
+		a{
+			font-weight: 600;
+			margin-right: 16px;
+			font-size: 14px;
+		}
+	}
+	img{
+		top: 6px;
+		right: 10px;
+	}
+}
+
+/* Similar to #products in style.scss, but with different padding. Could probably make these the same and change spacing a different, page-specific element */
+#profile{
+	width: 1500px;
+	margin: auto;
+	padding-top: 20px;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.profile-left{
+	float: left;
+	margin-right: 20px;
+	width: 300px;
+}
+
+.profile-right{
+	float: right;
+	width: 1180px;
+}
+
+/* Sidebar has similar sizing to results sidebar, so these general styles could be combined in style.scss */
+.profile-sidebar{
+	width: 100%;
+	height: 352px;
+	margin-right: 44px;
+	background-color: white;
+	border-radius: 10px;
+	color: $heading_color;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 14px;
+	font-weight: 600;
+	box-shadow: 0 2px 6px 0 rgba(69,73,91,0.08);
+	margin-bottom: 20px;
+	position: relative;
+	div{
+		width: 120px;
+		padding-left: 40px;
+		height: 40px;
+		line-height: 40px;
+		font-weight: 600;
+		color: $heading_color;
+		position: relative;
+		a{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 5;
+		}
+		img{
+			position: absolute;
+			top: 12px;
+			left: 12px;
+			height: 16px;
+		}
+		span{
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			height: 40px;
+			width: 40px;
+			text-align: center;
+			font-size: 12px;
+			line-height: 40px;
+			font-weight: normal;
+			cursor: pointer;
+			z-index: 6;
+		}
+		&.active{
+			background-color: rgba(68, 170, 237, 0.08);
+			color: $sheep_blue;
+			border-radius: 0px 20px 20px 0px;
+			border-left: 3px solid $sheep_blue;
+			img{
+				left: 9px;
+			}
+		}
+		&:nth-last-child(1){
+			position: absolute;
+			bottom: 10px;
+			left: 0;
+		}
+	}
+	ul{
+		height: 92px;
+		font-weight: 500;
+		list-style-type: none;
+		margin-bottom: 4px;
+		color: #7C7D81;
+		li{
+			margin-bottom: 10px;
+		}
+		.active{
+			color: $sheep_blue;
+		}
+	}
+}
+
+.profile-ad{
+	width: 100%;
+	height: 250px;
+	background-color: silver;
+}
+
+/* The general profile-box settings could be moved to style.scss */
+.profile-box{
+	width: 1140px;
+	background-color: white;
+	overflow: auto;
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 6px 0 rgba(69,73,91,0.08);
+	border-radius: 10px;
+	h1, h2, h3{
+		font-weight: 600;
+		color: $heading_color;
+	}
+	h1{
+		font-size: 22px;
+	}
+	h2{
+		font-size: 16px;
+	}
+	h3{
+		font-size: 12px;
+	}
+	&.payment-methods2{
+		color: $heading_color;
+		width: 100%;
+		padding: 0;
+		padding-bottom: 30px;
+		.payment-methods-header{	
+			width: 95%;
+			margin: auto;
+			font-weight: bold;
+			padding-top: 20px;
+			margin-bottom: 30px;
+		}
+		.payment-left{
+			float: left;
+			width: 45%;
+			padding-left: 3%;
+			overflow: auto;
+			span{
+				float: left;
+				margin-right: 20px;
+				font-size: 18px;
+				font-weight: 500;
+				line-height: 36px;
+			}
+		}
+		.payment-right{
+			float: right;
+			width: 45%;
+			padding-right: 3%;
+			position: relative;
+			height: 288px;
+			overflow: auto;
+		}
+		.label{
+			font-weight: 600;
+			font-size: 12px;
+			margin-top: 0;
+			margin-bottom: 10px;
+		}
+		input[type="text"], input[type="password"]{
+			width: 100%;
+			height: 36px;
+			line-height: 36px;
+			border-radius: 4px;
+			font-family: $montserrat;
+			border: 1px solid #ECECED;
+			font-weight: 500;
+			color: $heading_color;
+			font-size: 14px;
+			margin-bottom: 20px;
+			padding-left: 10px;
+			&.expiration{
+				float: left;
+				padding-left: 0;
+				text-align: center;
+				width: 50px;
+				margin-right: 20px;
+				&nth-last-child(1){
+					margin-right: 0;
+				}
+			}
+			&.cvv{
+				float: left;
+				padding-left: 0;
+				width: 57px;
+				text-align: center;
+			}
+			&:disabled{
+				border: none;
+				color: #9D9FA6;
+				background-color: $search_category_gray;
+			}
+			&:focus{
+				outline: none;
+			}
+		}
+		.float-clear{
+			float: none;
+			clear: both;
+		}
+		.cancel-button, .add-card{
+			width: 48%;
+			height: 45px;
+			line-height: 45px;
+			font-weight: bold;
+			text-align: center;
+			border-radius: 10px;
+			font-size: 14px;
+		}
+		.cancel-button{
+			border: 1px solid #44AAED;
+			box-sizing: border-box;
+			float: left;
+			color: $sheep_blue;
+			position: relative;
+			a{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.add-card{
+			background-color: $sheep_blue;
+			color: white;
+			font-family: $montserrat;
+			cursor: pointer;
+			float: right;
+			padding: 0;
+		}
+		.bottom-left{
+			float: left;
+			margin-right: 40px;
+			overflow: auto;
+		}
+		.bottom-right{
+			float: left;
+			overflow: auto;
+		}
+		.card{
+			width: 350px;
+			height: 210px;
+			background: rgb(68,170,237);
+			background: -moz-linear-gradient(45deg, rgba(68,170,237,1) 0%, rgba(68,100,237,1) 100%);
+			background: -webkit-linear-gradient(45deg, rgba(68,170,237,1) 0%, rgba(68,100,237,1) 100%);
+			background: linear-gradient(45deg, rgba(68,170,237,1) 0%, rgba(68,100,237,1) 100%);
+			box-shadow: 8px 8px 40px 0 rgba(68,108,237,0.28);
+			border-radius: 16px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			.brand{
+				position: absolute;
+				height: 20px;
+				top: 20px;
+				right: 20px;
+			}
+			.card-num{
+				position: absolute;
+				top: 70px;
+				left: 20px;
+				font-size: 18px;
+				font-weight: 600;
+				color: white;
+			}
+			.holder-title, .expiry-title{
+				color: white;
+				opacity: 0.5;
+				font-size: 12px;
+				font-weight: 500;
+				position: absolute;
+				top: 130px;
+			}
+			.holder-title{
+				left: 20px;
+			}
+			.expiry-title{
+				left: 270px;
+			}
+			.holder-name, .expiry-date{
+				color: white;
+				font-weight: 600;
+				position: absolute;
+				top: 160px;
+			}
+			.holder-name{
+				left: 20px;
+				display: inline-block;
+				max-width: 240px;
+				max-height: 50px;
+				overflow: auto;
+			}
+			.expiry-date{
+				left: 270px;
+				.month{
+					margin-right: 6px;
+				}
+				.year{
+					margin-left: 6px;
+				}
+			}
+		}
+		.card-back{
+			position: absolute;
+			left: 250px;
+			top: 20px;
+			z-index: 1;
+			width: 250px;
+			height: 160px;
+			box-shadow: 0 2px 7px 0 rgba(69,73,91,0.08);
+			border-radius: 16px;
+			.bar{
+				position: absolute;
+				top: 30px;
+				left: 0;
+				width: 100%;
+				height: 30px;
+				background-color: #E8E8F2;
+			}
+			.bar-2{
+				position: absolute;
+				top: 70px;
+				left: 0;
+				width: 160px;
+				height: 30px;
+				background-color: #F2F3FF;
+			}
+			.cvv{
+				position: absolute;
+				top: 70px;
+				left: 170px;
+				height: 30px;
+				line-height: 30px;
+				font-weight: 600;
+				color: #3B3D4C;
+			}
+			.asterisk{
+				position: absolute;
+				top: 100px;
+				left: 174px;
+				height: 30px;
+				line-height: 30px;
+				font-weight: 600;
+				color: #3B3D4C;
+				letter-spacing: 4px;
+			}
+		}
+	}
+}
+
+/* === Mobile Styles === */
+
+/* Uses similar styles to #products-header {li{}} in style.scss. A lot of styles could be combined */
+.profile-options-slick{
+	margin-bottom: 20px;
+	overflow: hidden;
+	.slick-slide {
+		margin-left: 0px;
+	}
+	.slick-list {
+		margin-left: 20px;
+	}
+	.slick-arrow {
+		display: none !important;
+	}
+	li {
+		list-style-type: none;
+		display: inline-block;
+		padding-left: 7px;
+		padding-right: 7px;
+		text-align: center;
+		border-bottom: 1px solid #dbdbdb;
+		padding-bottom: 10px;
+		font-size: 16px;
+		transition: border-color 0.5s;
+		img{
+			height: 16px;
+			margin-right: 10px;
+			display: inline-block;
+		}
+		&:hover {
+			border-color: $sheep_blue;
+			border-width: 3px;
+			padding-bottom: 9px;
+		}
+	}
+}
+
+.sub-options-slick{
+	margin-bottom: 20px;
+	overflow: hidden;
+	.slick-slide{
+		margin-right: 10px;
+		outline: none !important;
+		&:nth-last-child(1){
+			margin-right: 0;
+		}
+		a{
+			outline: none !important;
+		}
+	}
+	.slick-list{
+		margin-left: 20px;
+	}
+	.slick-arrow{
+		display: none !important;
+	}
+	.profile-sub-option{
+		background-color: white;
+		color: $sheep_blue;
+		font-weight: 500;
+		width: 114px;
+		height: 76px;
+		padding-left: 18px;
+		padding-right: 18px;
+		border-radius: 8px;
+		box-shadow: 0 2px 6px 0 rgba(69,73,91,0.08);
+		display: table;
+		a{
+			display: table-cell;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			vertical-align: middle;
+		}
+		&.active{
+			background-color: $sheep_blue;
+			color: white;
+			font-weight: 600;
+		}
+	}
+}
+
+.log-out-mobile{
+	height: 60px;
+	line-height: 60px;
+	width: 100%;
+	background-color: #ECECED;
+	color: $heading_color;
+	text-align: center;
+	font-weight: 600;
+	position: relative;
+	img{
+		height: 16px;
+		margin-right: 20px;
+	}
+	a{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/* === MEDIA QUERIES === */
+@media only screen and (max-width:1510px) {
+	#profile{
+		width: 950px;
+	}
+	.profile-left{
+		width: 190px;
+	}
+	.profile-ad{
+		height: 158px;
+	}
+	
+	.profile-right{
+		width: 740px;
+	}
+	.profile-box{
+		width: 700px;
+		&.payment-methods2{
+			.payment-left, .payment-right{
+				float: none;
+				clear: both;
+				padding: 0;
+				margin: auto;
+			}
+			.payment-left{
+				width: 95%;
+			}
+			.payment-right{
+				width: 500px;
+				height: 250px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:965px) {
+	#profile{
+		width: 100%;
+	}
+	
+	.profile-right{
+		clear: both;
+		float: none;
+		margin: auto;
+	}
+}
+
+@media only screen and (max-width:750px) {
+	.mobile-hidden-750 {
+		display: none;
+	}
+	.desktop-hidden-750 {
+		display: block;
+	}
+	.profile-right{
+		width: 450px;
+	}
+	.profile-box{
+		width: 410px;
+		&.payment-methods2{
+			padding-top: 20px;
+			.payment-right{
+				width: 425px;
+			}
+			.card{
+				width: 325px;
+				.holder-name{
+					max-width: 215px;
+				}
+				.expiry-title{
+					left: 245px;
+				}
+				.expiry-date{
+					left: 245px;
+				}
+			}
+			.card-back{
+				left: 175px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:460px) {
+	.profile-options-slick{
+		.slick-list{
+			margin-left: 0;
+		}
+	}
+	.sub-options-slick{
+		.slick-list{
+			margin-left: 0;
+			.slick-track{
+				margin-left: 80px;
+			}
+		}
+	}
+	.profile-right{
+		width: 100%;
+	}
+	.profile-box{
+		&.payment-methods2{
+			width: 100%;
+			box-shadow: none;
+			border-radius: none;
+			.cancel-button, .add-card{
+				float: none;
+				clear: both;
+				width: 250px;
+			}
+			.cancel-button, .add-card-wrapper{
+				margin: auto;
+			}
+			.add-card-wrapper{
+				width: 250px;
+				margin-bottom: 20px;
+			}
+			.payment-left{
+				width: 90%;
+				margin: auto;
+			}
+			.payment-right{
+				width: 310px;
+				height: 200px;
+			}
+			.card{
+				width: 250px;
+				height: 162px;
+				.brand{
+					height: 15px;
+				}
+				.card-num{
+					top: 50px;
+					font-size: 14px;
+				}
+				.holder-title{
+					top: 90px;
+					font-size: 10px;
+				}
+				.expiry-title{
+					top: 90px;
+					left: 170px;
+					font-size: 10px;
+				}
+				.holder-name, .expiry-date{
+					top: 110px;
+					font-size: 12px;
+				}
+				.holder-name{
+					max-width: 145px;
+				}
+				.expiry-date{
+					left: 170px;
+				}
+			}
+			.card-back{
+				width: 215px;
+				left: 95px;
+				top: 10px;
+				height: 130px;
+				.bar{
+					top: 20px;
+					height: 20px;
+					width: 215px;
+				}
+				.bar-2{
+					top: 60px;
+					height: 20px;
+				}
+				.cvv{
+					top: 60px;
+					line-height: 20px;
+					font-size: 12px;
+				}
+				.asterisk{
+					top: 90px;
+					line-height: 20px;
+					font-size: 12px;
+					letter-spacing: 2px;
+				}
+			}
+		}
+	}
+	.log-out-mobile{
+		width: 90%;
+		margin: auto;
+	}
+}

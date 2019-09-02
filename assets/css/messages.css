@@ -41,6 +41,9 @@ input {
 .desktop-hidden-630 {
   display: none; }
 
+image {
+  border: none; }
+
 footer {
   width: 100%;
   background-color: #464F55;
@@ -961,6 +964,9 @@ footer {
   top: 6px;
   right: 10px; }
 
+.desktop-hidden-750 {
+  display: none; }
+
 /* Similar to #products in style.scss, but with different padding. Could probably make these the same and change spacing a different, page-specific element */
 #profile {
   width: 1500px;
@@ -1104,6 +1110,8 @@ footer {
     width: 230px; }
   .profile-box.messages .subject-heading {
     width: 780px; }
+  .profile-box.messages .date-heading {
+    padding-left: 10px; }
   .profile-box.messages .message-list {
     width: 1140px;
     float: none;
@@ -1115,16 +1123,24 @@ footer {
     .profile-box.messages .message-list .message-item {
       width: 100%;
       height: 50px;
-      line-height: 50px; }
+      display: table;
+      table-layout: fixed; }
       .profile-box.messages .message-list .message-item:nth-child(odd) {
         background-color: #F5F6F8; }
-      .profile-box.messages .message-list .message-item div {
-        float: left; }
+      .profile-box.messages .message-list .message-item .subject, .profile-box.messages .message-list .message-item .from, .profile-box.messages .message-list .message-item .date {
+        overflow: auto;
+        display: table-cell;
+        vertical-align: middle; }
       .profile-box.messages .message-list .message-item .from {
-        margin-left: 20px;
-        width: 230px; }
+        padding-right: 10px;
+        padding-left: 20px;
+        width: 220px;
+        max-width: 220px; }
       .profile-box.messages .message-list .message-item .subject {
-        width: 780px; }
+        width: 780px;
+        max-width: 780px; }
+      .profile-box.messages .message-list .message-item .date {
+        padding-left: 10px; }
 
 /* Same styles as results-navigation in style.scss with slight spacing/sizing differences. These can be combined in style.scss */
 .messages-navigation {
@@ -1271,9 +1287,11 @@ footer {
     .profile-box.messages .message-list {
       width: 700px; }
       .profile-box.messages .message-list .message-item .from {
-        width: 140px; }
+        width: 130px;
+        max-width: 130px; }
       .profile-box.messages .message-list .message-item .subject {
-        width: 440px; } }
+        width: 440px;
+        max-width: 440px; } }
 
 @media only screen and (max-width: 965px) {
   #profile {
@@ -1307,23 +1325,16 @@ footer {
     .profile-box.messages .from-heading {
       width: 100px; }
     .profile-box.messages .subject-heading {
-      width: 170px; }
+      width: 200px; }
     .profile-box.messages .message-list {
       width: 410px;
       font-size: 12px; }
-      .profile-box.messages .message-list .message-item {
-        display: table; }
-        .profile-box.messages .message-list .message-item .from, .profile-box.messages .message-list .message-item .subject, .profile-box.messages .message-list .message-item .date {
-          float: none;
-          clear: both;
-          display: table-cell;
-          line-height: normal;
-          vertical-align: middle; }
-        .profile-box.messages .message-list .message-item .from {
-          padding-left: 20px;
-          width: 100px; }
-        .profile-box.messages .message-list .message-item .subject {
-          width: 170px; } }
+      .profile-box.messages .message-list .message-item .from {
+        width: 90px;
+        max-width: 90px; }
+      .profile-box.messages .message-list .message-item .subject {
+        width: 200px;
+        max-width: 200px; } }
 
 @media only screen and (max-width: 460px) {
   .profile-options-slick .slick-list {
@@ -1348,21 +1359,20 @@ footer {
     width: 100%;
     border-radius: 0; }
     .profile-box.messages .from-heading {
-      width: 20%;
+      width: 25%;
       margin-left: 10px; }
     .profile-box.messages .subject-heading {
-      width: 46%; }
-    .profile-box.messages .date-heading {
-      margin-left: 10px; }
+      width: 49%; }
     .profile-box.messages .message-list {
       width: 100%; }
       .profile-box.messages .message-list .message-item .from {
         padding-left: 10px;
-        width: 24%; }
+        padding-right: 10px;
+        width: 28%;
+        max-width: 28%; }
       .profile-box.messages .message-list .message-item .subject {
-        width: 46%; }
-      .profile-box.messages .message-list .message-item .date {
-        padding-left: 10px; }
+        width: 50%;
+        max-width: 50%; }
   .log-out-mobile {
     width: 90%;
     margin: auto; } }

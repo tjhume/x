@@ -247,12 +247,21 @@ $select_arrow_border: transparent transparent #D8D9DB transparent;
 		color: $heading_color;
 		.message-title-delete{
 			width: 100%;
-			height: 42px;
-			line-height: 42px;
 			margin-bottom: 30px;
+			height: 42px;
+			display: table;
+			table-layout: fixed;
 			h2{
+				display: table-cell;
+				max-width: 100%;
+				vertical-align: middle;
 				font-size: 18px;
-				float: left;
+				overflow: auto;
+			}
+			.delete-wrapper{
+				display: table-cell;
+				width: 100px;
+				height: 40px;
 			}
 			.delete-button{
 				float: right;
@@ -562,9 +571,18 @@ $select_arrow_border: transparent transparent #D8D9DB transparent;
 			border-radius: 0;
 			overflow: hidden;
 			.message-title-delete{
-				padding-left: 10px;
+				width: 90%;
+				padding-left: 5%;
+				padding-right: 5%;
 				h2{
 					font-size: 16px;
+				}
+				.delete-wrapper{
+					width: 80px;
+				}
+				.delete-button{
+					width: 70px;
+					font-size: 14px;
 				}
 			}
 			.chat{

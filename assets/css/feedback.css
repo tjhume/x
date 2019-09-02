@@ -41,6 +41,9 @@ input {
 .desktop-hidden-630 {
   display: none; }
 
+image {
+  border: none; }
+
 footer {
   width: 100%;
   background-color: #464F55;

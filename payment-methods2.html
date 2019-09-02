@@ -10,13 +10,14 @@
 		
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,800|Nunito&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet">
 		
 		<!-- Slick Carousel CSS -->
 		<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
 		
 		<!-- Custom CSS -->
-		<link href="assets/css/order-details.css" rel = "stylesheet">
+		<link href="assets/css/payment-methods2.css" rel = "stylesheet">
 		
 		<!-- HTML 5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
 		
@@ -90,103 +91,99 @@
 				
 				<!-- PROFILE OPTIONS (MOBILE ONLY) -->
 				<div class = "profile-options-slick desktop-hidden">
-					<a href = "#"><li><img src = "assets/img/my-profile.png">My Profile</li></a>
+					<a href = "#"><li id = "active-category"><img src = "assets/img/my-profile-active.png">My Profile</li></a>
 					<a href = "#"><li><img src = "assets/img/messages.png">Messages</li></a>
-					<a href = "#"><li id = "active-category"><img src = "assets/img/purchases-active.png">Purchases</li></a>
+					<a href = "#"><li><img src = "assets/img/purchases.png">Purchases</li></a>
+					<a href = "#"><li><img src = "assets/img/selling.png">Selling</li></a>
 					<a href = "#"><li><img src = "assets/img/help.png">Help</li></a>
 				</div><!-- PROFILE OPTIONS -->
 				
-				<!-- VERIFY EMAIL BANNER -->
-				<div class = "verify-email-banner">
-					<span>Welcome to SheepBuy! Please <a href = "#">verify your email</a> to complete registration and enable purchasing and selling features.</span>
-				</div><!-- end verify email banner -->
+				<!-- MY PROFILE SUB-OPTIONS -->
+				<div class = "sub-options-slick desktop-hidden">
+					<div class = "profile-sub-option"><a href = "#">General<br>Info</a></div>
+					<div class = "profile-sub-option"><a href = "#">Subscription Overview</a></div>
+					<div class = "profile-sub-option active"><a href = "#">Payment Methods</a></div>
+					<div class = "profile-sub-option"><a href = "#">Contact Buyer</a></div>
+				</div>
+				<!-- end sub-options -->
 				
 				<!-- PROFILE SIDEBAR (DESKTOP ONLY) -->
 				<div class = "profile-left mobile-hidden">
 					<div class = "profile-sidebar">
-						<div class = "my-profile"><img src = "assets/img/my-profile.png"><a href = "#"></a>My Profile</div>
+						<div class = "my-profile active"><img src = "assets/img/my-profile-active.png"><a href = "#"></a>My Profile<span>&#9650;</span></div>
+						<ul class = "profile-drop-down">
+							<li><a href = "#">Subscription Overview</a></li>
+							<li class = "active"><a href = "#">Payment Methods</a></li>
+							<li><a href = "#">Contact Buyer</a></li>
+						</ul>
 						<div class = "messages"><img src = "assets/img/messages.png"><a href = "#"></a>Messages</div>
-						<div class = "purchases active"><img src = "assets/img/purchases-active.png"><a href = "#"></a>Purchases</div>
+						<div class = "purchases"><img src = "assets/img/purchases.png"><a href = "#"></a>Purchases</div>
+						<div class = "selling"><img src = "assets/img/selling.png"><a href = "#"></a>Selling</div>
 						<div class = "help"><img src = "assets/img/help.png"><a href = "#"></a>Help</div>
 						<div class = "log-out"><img src = "assets/img/log-out.png"><a href = "#"></a>Log Out</div>
 					</div>
 					<div class = "profile-ad"></div>
 				</div><!-- end profile sidebar (desktop only) -->
 				
-				<!-- PURCHASES CONTENT -->
+				<!-- PAYMENT METHODS CONTENT -->
 				<div class = "profile-right">
 				
-					<!-- ORDER DETAILS -->
-					<div class = "purchases-header"><h1>Items Purchased</h1></div>
-					<div class = "profile-box order-details">
-						<div class = "order-number">Purchase Order #28</div><div class = "order-date">Date: <span>07/24/2019</span></div>
+					<!-- PAYMENT METHODS PROFILE BOX -->
+					<div class = "profile-box payment-methods2">
+						<h1 class = "payment-methods-header mobile-hidden-750">Payment Methods</h1>
 						
-						<div class = "float-clear"></div>
-						
-						<!-- LEFT ORDER BOX -->
-						<div class = "order-box left">
-							<h3>Buyer Information</h3>
-							<div class = "divider"></div>
-							<p>JohnDoe002</p>
-						</div><!-- end order box -->
-						
-						<!-- RIGHT ORDER BOX -->
-						<div class = "order-box right">
-							<h3>Shipping Address</h3>
-							<div class = "divider"></div>
-							<p>John Doe</p>
-							<p>301 NW 11th St</p>
-							<p>San Francisco, CA, 5011</p>
-						</div><!-- end order box -->
-						
-						<!-- PURCHASED ITEM BOX -->
-						<div class = "purchased-item-box">
-							<div class = "img-info-wrapper">
-								<!-- ITEM IMG -->
-								<div class = "item-img"></div>
-								
-								<!-- ITEM INFO -->
-								<div class = "item-info">
-									<h2 class = "item-name">Troy Bilt Mower, only used once</h2>
-									<p class = "item-seller">Seller: <span>jdoe002</span></p>
-									<p class = "item-status">Condition: <span>New</span></p>
-								</div><!-- end item info -->
+						<!-- RIGHT SIDE (CARD IMAGE) -->
+						<div class = "payment-right">
+							<div class = "card">
+								<img class = "brand" src = "assets/img/visa.png">
+								<div class = "card-num">XXXX XXXX XXXX XXXX</div>
+								<div class = "holder-title">Cardholder Name</div><div class = "expiry-title">Expiry</div>
+								<div class = "holder-name">Your Name Here</div><div class = "expiry-date"><span class = "month">XX</span>/<span class = "year">XX</span></div>
 							</div>
+							<div class = "card-back">
+								<div class = "bar"></div>
+								<div class = "bar-2"></div><span class = "cvv">CVV</span>
+								<span class = "asterisk">***</span>
+							</div>
+						</div><!-- end right side -->
+						
+						<!-- LEFT SIDE (INPUT FORM) -->
+						<div class = "payment-left">
+							<form>
 							
-							<!-- ITEM COST -->
-							<div class = "item-cost">
-								<p>Quantity<span>1</span></p>
-								<p>Price<span>$400</span></p>
-								<p>Subtotal<span>$400</span></p>
-								<p>Shipping<span>$89</span></p>
-								<div class = "divider"></div>
-								<h2>Total<span>$489</span></h2>
-							</div><!-- end item cost -->
-						</div><!-- end purchased item box -->
+								<p class = "label">Card Number</p>
+								<input class = "card-num" type = "text" maxlength = "24">
+								
+								<p class = "label">Cardholder Name</p>
+								<input class = "holder-name" type = "text">
+								
+								<div class = "bottom-left">
+									<p class = "label exp">Expiration Date</p>
+									<input class = "expiration month" type = "text" maxlength = "2"><span>/</span><input class = "expiration year" type = "text" maxlength = "2">
+								</div>
+								
+								<div class = "bottom-right">
+									<p class = "label cv">CVV</p>
+									<input class = "cvv" type = "password" maxlength = "4">
+								</div>
+								
+								<div class = "float-clear"></div>
+								
+								<div class = "add-card-wrapper"><input class = "add-card" type = "submit" value = "Add Card"></div>
+								<div class = "cancel-button"><a href = "#">Cancel</a></div>
+								
+							</form>
+						</div><!-- end input form -->
 						
-						<!-- DESCRIPTION -->
-						<div class = "description-box">
-							<h1>Description</h1>
-							<p>CoolMax inserts across the knuckle and between the fingers for the best possible fit.</p>
-							<p>Easy to fasten velcro strap.</p>
-							<p>Left handed glove for the right handed golfer</p>
-							<p>Ball marker on the wrist</p>
-							<p>Leather palm patch which improves grip and durability</p>
-							<p>Amazon has this glove selling for 14.90 dlls.</p>
-							<p>I am clearing storage space, husband never used, selling for $11.00 shipping included.</p>
-						</div><!-- end description -->
-						
-						<!-- RETURN POLICY -->
-						<div class = "description-box">
-							<h1>Return Policy</h1>
-							<p>Item is too inexpensive and considering I'm shipping for free I cannot accept returns, refunds and or exchanges.</p>
-						</div><!-- end return policy -->
-						
-					</div><!-- end order details -->
+					</div><!-- end profile box -->
 					
-				</div><!-- end profile content -->
+					<!-- LOG OUT BUTTON (MOBILE ONLY) -->
+					<div class = "log-out-mobile desktop-hidden"><a href = "#"><img src = "assets/img/log-out.png">Log Out</a></div>
+					
+				</div><!-- end subscription overview content -->
+				
 			</div>
-		</section><!-- end products section -->
+		</section><!-- end profile section -->
 		
 		
 		<!-- FOOTER
@@ -451,16 +448,140 @@
 			}
 			
 			
+			/* Credit card input validation */
+			$('.payment-left > form > .card-num').on("input", function(){
+				var maxLength = 24;
+				var currentLength = $(this).val().length;
+				var value = $(this).val();
+				
+				if (currentLength > maxLength){
+					value = value.substring(0, maxLength);
+				}
+				
+				value = value.replace(/\D/g,'');
+				
+				var foo = value.split(" ").join(""); 
+				if (foo.length > 0) {
+					foo = foo.match(new RegExp('.{1,4}', 'g')).join(" ");
+				}
+				value = foo;
+				
+				$(this).val(value);
+				
+				if(value == ''){
+					value = 'XXXX XXXX XXXX XXXX';
+				}
+				
+				$('.payment-right > .card > .card-num').html(value);
+				
+			});
 			
+			/* Cardholder input */
+			$('.payment-left > form > .holder-name').on("input", function(){
+				var value = $(this).val();
+				
+				if(value == ''){
+					value = 'Your Name Here';
+				}
+				
+				$('.payment-right > .card > .holder-name').html(value);
+				
+			});
 			
+			/* Expiration input month validation */
+			$('.payment-left > form > .bottom-left > .month').on("input", function(){
+				var maxLength = 2;
+				var currentLength = $(this).val().length;
+				var value = $(this).val();
+				
+				if (currentLength > maxLength){
+					value = (value.substring(0, maxLength));
+				}
+				
+				value = value.replace(/\D/g,'');
+				
+				$(this).val(value);
+				
+				if(value.length == 1){
+					value = "0" + value;
+				}
+				
+				if(value == ''){
+					value = 'XX';
+				}
+				
+				$('.payment-right > .card > .expiry-date > .month').html(value);
+				
+			});
+			
+			/* Expiration input year validation */
+			$('.payment-left > form > .bottom-left > .year').on("input", function(){
+				var maxLength = 2;
+				var currentLength = $(this).val().length;
+				var value = $(this).val();
+				
+				if (currentLength > maxLength){
+					value = (value.substring(0, maxLength));
+				}
+				
+				value = value.replace(/\D/g,'');
+				
+				$(this).val(value);
+				
+				if(value.length == 1){
+					value = "0" + value;
+				}
+				
+				if(value == ''){
+					value = 'XX';
+				}
+				
+				$('.payment-right > .card > .expiry-date > .year').html(value);
+				
+			});
+			
+			/* CVV validation */
+			$('.payment-left > form > .bottom-right > .cvv').on("input", function(){
+				var maxLength = 4;
+				var currentLength = $(this).val().length;
+				var value = $(this).val();
+				
+				if (currentLength > maxLength){
+					value = (value.substring(0, maxLength));
+				}
+				
+				value = value.replace(/\D/g,'');
+				
+				$(this).val(value);
+			});
 			
 			$(document).ready(function(){
-				/* === PROFILE OPTIONS SLICK == */
+				/* === PROFILE OPTIONS SLICK =-= */
 				$('.profile-options-slick').slick({
 					infinite: false,
 					variableWidth: true,
 					slidesToScroll: 2,
 					swipeToSlide: true
+				});
+				
+				/* === SUB-OPTIONS SLICK === */
+				$('.sub-options-slick').slick({
+					infinite: false,
+					swipeToSlide: true,
+					variableWidth: true
+				});
+				
+				/* === SIDEBAR SUB-MENU === */
+				$('.profile-sidebar > .my-profile > span').click(function() {
+					var d = $('.profile-drop-down').css('display');
+					if(d == 'none'){
+						$('.profile-drop-down').css('display', 'block');
+						$('.profile-sidebar > .my-profile > span').html('&#9650;');
+					}
+					else{
+						$('.profile-drop-down').css('display', 'none');
+						$('.profile-sidebar > .my-profile > span').html('&#9660;');
+					}
 				});
 				
 				// Adds drop-down abbreviation attributes
@@ -488,6 +609,16 @@
 				//reverts name change once page is large enough
 				else{
 					revertSelect();
+				}
+				
+				//Changes sub-menu carousel to center mode at 460px
+				if($('.profile-options-slick > .slick-list').css('margin-left') == '0px'){
+					//$('.sub-options-slick').slick('slickSetOption', 'centerMode', true);
+					$('.sub-options-slick').slick('slickGoTo', 2);
+				}
+				else{
+					//$('.sub-options-slick').slick('slickSetOption', 'centerMode', false);
+					$('.sub-options-slick').slick('slickGoTo', 0);
 				}
 			}
 			

@@ -1,0 +1,827 @@
+/* Colors */
+$dark: #161616;
+$sheep_blue: #44AAED;
+$heading_color: #464855;
+$item_category_text: #898EA2;
+$product_shipping_text: #7C7D81;
+$description_text: #90929D;
+$package_title_text: #3DA7ED;
+$package_price_text: #353535;
+$package_details_text: #363636;
+$search_category_gray: #F6F7F7;
+$search_category_highlight: rgba(0, 0, 0, 0.1);
+$search_magnifier_background: #ECF6FD;
+$products_packages_containers_background: #F5F6F8;
+$browse_more_background: #EBF1F7;
+
+/* Fonts */
+$nunito: Nunito, Arial, sans-serif;
+$montserrat: Montserrat, Arial, sans-serif;
+
+/* Borders */
+$select_box_border: #D8D9DB transparent transparent transparent;
+$select_arrow_border: transparent transparent #D8D9DB transparent;
+
+@import 'style.scss';
+
+/* === MY PROFILE === */
+
+/* Same styles as product-container in style.scss. Can be put together and given the same name */
+#profile-container {
+	width: 100%;
+	padding-bottom: 50px;
+	background-color: $products_packages_containers_background;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+/* Could be moved (along with #mobile-login-register below) to style.scss. Probably add a class like "logged-in" for when the user is logged in and add these specific styles with &.logged-in{} in style.scss */
+#login-register, #mobile-login-register{
+	position: relative;
+	span{
+		font-weight: bold;
+		margin-left: 0px;
+		margin-right: 0px;
+		a{
+			font-weight: normal;
+			color: $sheep_blue;
+			margin-left: 20px;
+			margin-right: 22px;
+		}
+	}
+	img{
+		height: 15px;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+.desktop-hidden-750{
+	display: none;
+}
+
+#mobile-login-register{
+	span{
+		a{
+			font-weight: 600;
+			margin-right: 16px;
+			font-size: 14px;
+		}
+	}
+	img{
+		top: 6px;
+		right: 10px;
+	}
+}
+
+.becoming-seller-banner{
+	width: 100%;
+	background-color: rgba(61,167,237,0.11);
+	box-shadow: 1px 0 0 0 #FFFFFF;
+	border-radius: 4px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	color: $heading_color;
+	font-weight: 600;
+	font-size: 12px;
+	text-align: center;
+	margin-bottom: 30px;
+	display: table;
+	a{
+		color: $sheep_blue;
+	}
+	div{
+		display: table-cell;
+		vertical-align: middle;
+		width: 95%;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+	}
+}
+
+/* Similar to #products in style.scss, but with different padding. Could probably make these the same and change spacing a different, page-specific element */
+#profile{
+	width: 1500px;
+	margin: auto;
+	padding-top: 20px;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.profile-right{
+	width: 100%;
+	margin: auto;
+}
+
+/* The general profile-box settings could be moved to style.scss */
+.profile-box{
+	width: 1140px;
+	background-color: white;
+	overflow: auto;
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 6px 0 rgba(69,73,91,0.08);
+	border-radius: 10px;
+	h1, h2, h3{
+		font-weight: 600;
+		color: $heading_color;
+	}
+	h1{
+		font-size: 22px;
+	}
+	h2{
+		font-size: 16px;
+	}
+	h3{
+		font-size: 12px;
+	}
+	&.becoming-seller{
+		color: $heading_color;
+		width: 95%;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		padding-bottom: 40px;
+		padding-top: 40px;
+		.seller-header{
+			font-weight: bold;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+		.steps{
+			width: 650px;
+			overflow: auto;
+			margin: auto;
+			margin-bottom: 60px;
+			.top{
+				width: 600px;
+				overflow: auto;
+				margin: auto;
+				div{
+					float: left;
+				}
+			}
+			.active-step, .inactive-step{
+				font-weight: 600;
+				font-size: 24px;
+				width: 60px;
+				height: 60px;
+				line-height: 60px;
+				text-align: center;
+			}
+			.active-step{
+				color: white;
+				background: rgb(68,170,237);
+				background: -moz-linear-gradient(45deg, rgba(68,170,237,1) 0%, rgba(68,100,237,1) 100%);
+				background: -webkit-linear-gradient(45deg, rgba(68,170,237,1) 0%, rgba(68,100,237,1) 100%);
+				background: linear-gradient(45deg, rgba(68,170,237,1) 0%, rgba(68,100,237,1) 100%);
+				box-shadow: 4px 4px 16px 0 rgba(50,114,192,0.16);
+				border-radius: 60px;
+			}
+			.inactive-step{
+				color: #D5D5D8;
+			}
+			.first{
+				margin-right: 25px;
+			}
+			.second{
+				margin-left: 25px;
+				margin-right: 25px;
+			}
+			.third{
+				margin-left: 25px;
+			}
+			.inactive-dot, .active-dot{
+				width: 8px;
+				height: 8px;
+				border-radius: 8px;
+				margin-left: 12px;
+				margin-right: 12px;
+				margin-top: 26px;
+			}
+			.inactive-dot{
+				background-color: #ECECED;
+			}
+			.active-dot{
+				box-shadow: 4px 4px 16px 0 rgba(50,114,192,0.16);
+				background-color: $sheep_blue;
+			}
+			.bottom-text{
+				width: 100%;
+				font-weight: bold;
+				font-family: 'Lato', sans-serif;
+				position: relative;
+				margin-top: 20px;
+				.inactive{
+					color: #D5D5D8;
+				}
+				.active{
+					color: $heading_color;
+				}
+				.completed{
+					color: $sheep_blue;
+				}
+				.center{
+					width: 100%;
+					text-align: center;
+				}
+				.left{
+					position: absolute;
+					top: 0;
+					left: 14px;
+					&.active{
+						color: $sheep_blue;
+					}
+				}
+				.right{
+					position: absolute;
+					top: 0;
+					right: 0;
+				}
+			}
+		}
+		.section-header{
+			text-align: center;
+			margin-bottom: 60px;
+		}
+		.section-description{
+			margin-top: 0;
+			margin-bottom: 40px;
+			width: 675px;
+			margin-left: auto;
+			margin-right: auto;
+			font-weight: 300;
+			font-size: 14px;
+			text-align: center;
+			line-height: 20px;
+			margin-bottom: 60px;
+			a{
+				color: $sheep_blue;
+				font-weight: 500;
+			}
+		}
+		form{
+			width: 400px;
+			margin: auto;
+			.label{
+				font-weight: 600;
+				font-size: 12px;
+				margin-bottom: 10px;
+			}
+			input[type = "text"]{
+				width: 100%;
+				height: 36px;
+				line-height: 36px;
+				border-radius: 4px;
+				font-family: $montserrat;
+				color: $heading_color;
+				font-size: 14px;
+				background-color: $search_category_gray;
+				padding: 0;
+				padding-left: 10px;
+				margin-bottom: 20px;
+				&:focus{
+					outline: none;
+				}
+			}
+			.submit-wrapper{
+				width: 195px;
+				margin: auto;
+			}
+			input[type = "submit"]{
+				padding: 0;
+				width: 100%;
+				height: 45px;
+				line-height: 45px;
+				background-color: $sheep_blue;
+				color: white;
+				text-align: center;
+				font-family: $montserrat;
+				font-size: 14px;
+				font-weight: bold;
+				outline: none;
+				border-radius: 10px;
+				margin: auto;
+				&:focus{
+					outline: none;
+				}
+			}
+		}
+		.packages-wrapper{
+			overflow: auto;
+			width: 65%;
+			margin: auto;
+			padding-bottom: 20px;
+		}
+		.package-container{
+			width: 32%;
+			margin-right: 2%;
+			&:nth-last-child(1){
+				margin-right: 0;
+			}
+			float: left;
+			box-shadow: 0 2px 6px 0 rgba(69,73,91,0.08);
+			h1{
+				text-align: center;
+				color: $sheep_blue;
+				margin-bottom: 20px;
+			}
+			.package-description{
+				color: #B3B3B3;
+				font-size: 14px;
+				font-weight: 300;
+				text-align: center;
+				margin-top: 0;
+				margin-bottom: 30px;
+			}
+			.package-price{
+				color: $package_price_text;
+				font-size: 48px;
+				letter-spacing: -0.5px;
+				text-align: center;
+				margin-bottom: 30px;
+				span{
+					font-size: 18px;
+				}
+			}
+			.benefits-wrapper{
+				width: 70%;
+				margin: auto;
+			}
+			.package-benefit{
+				color: $package_details_text;
+				font-size: 14px;
+				font-family: 'Lato', sans-serif;
+				margin-top: 0;
+				margin-bottom: 15px;
+				padding-left: 24px;
+				position: relative;
+				&:nth-last-child(1){
+					margin-bottom: 30px;
+				}
+				span{
+					position: absolute;
+					left: 0;
+					top: -8px;
+					color: #2ECC71;
+					font-size: 22px;
+				}
+			}
+			.get-started-button{
+				height: 45px;
+				line-height: 45px;
+				width: 195px;
+				margin: auto;
+				font-size: 14px;
+				font-weight: 600;
+				color: white;
+				background-color: $sheep_blue;
+				border-radius: 10px;
+				text-align: center;
+				margin-bottom: 20px;
+				position: relative;
+				a{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+		.notice-wrapper{
+			width: 65%;
+			margin: auto;
+			margin-bottom: 20px;
+		}
+		.not-included{
+			font-weight: 500;
+			color: #7C7C7C;
+			font-size: 12px;
+			margin-top: 0;
+			margin-bottom: 20px;
+		}
+		.notice{
+			font-weight: 300;
+			color: #717171;
+			font-size: 12px;
+			margin-top: 0;
+			margin-bottom: 4px;
+		}
+		.plan-box{
+			width: 550px;
+			padding: 20px;
+			box-shadow: 0 2px 6px 0 rgba(69,73,91,0.08);
+			margin: auto;
+			overflow: auto;
+			.plan-left, .plan-right{
+				width: 50%;
+				float: left;
+			}
+			.plan-left{
+				font-family: 'Lato', sans-serif;
+			}
+			.plan-right{
+				height: 212px;
+				position: relative;
+			}
+			h1{
+				margin-bottom: 30px;
+			}
+			.package-benefit{
+				color: $package_details_text;
+				font-size: 14px;
+				margin-top: 0;
+				margin-bottom: 15px;
+				padding-left: 24px;
+				position: relative;
+				&:nth-last-child(1){
+					margin-bottom: 10px;
+				}
+				span{
+					position: absolute;
+					left: 0;
+					top: -8px;
+					color: #2ECC71;
+					font-size: 22px;
+				}
+			}
+			.plan-price{
+				font-weight: 600;
+				position: absolute;
+				top: 0;
+				right: 0;
+				color: $package_price_text;
+				font-size: 48px;
+				letter-spacing: -0.5px;
+				span{
+					display: block;
+					font-size: 14px;
+					font-family: 'Lato', sans-serif;
+					font-weight: normal;
+					text-align: right;
+				}
+			}
+			.subscribe-button{
+				position: absolute;
+				bottom: 10px;
+				right: 0;
+				width: 195px;
+				height: 45px;
+				line-height: 45px;
+				text-align: center;
+				background-color: $sheep_blue;
+				color: white;
+				font-size: 14px;
+				font-weight: bold;
+				border-radius: 10px;
+				a{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+		.payment-method-container{
+			width: 550px;
+			padding: 20px;
+			margin: auto;
+			.payment-method-header{
+				font-size: 14px;
+				font-weight: bold;
+				width: 200px;
+				position: relative;
+				cursor: pointer;
+				.show-hide-button{
+					position: absolute;
+					top: 1px;
+					right: 0;
+					font-size: 12px;
+				}
+			}
+			.payment-method-content{
+				margin-top: 20px;
+				.if-no-method{
+					font-weight: 300;
+					font-size: 14px;
+					display: none;
+				}
+				
+				/* The container */
+				.container {
+					display: block;
+					position: relative;
+					padding-left: 35px;
+					line-height: 23px;
+					cursor: pointer;
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					user-select: none;
+					font-size: 14px;
+					font-weight: 600;
+					margin-bottom: 20px;
+					width: 200px;
+				}
+
+				/* Hide the browser's default radio button */
+				.container input {
+					position: absolute;
+					opacity: 0;
+					top: 0;
+					left: 0;
+					width: 23px;
+					height: 23px;
+					margin: 0;
+					cursor: pointer;
+				}
+
+				/* Create a custom radio button */
+				.checkmark {
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 21px;
+					width: 21px;
+					background-color: white;
+					border: 1px solid #D5D5D8;
+					border-radius: 21px;
+				}
+
+				/* On mouse-over, add a grey background color */
+				.container:hover input ~ .checkmark {
+					background-color: #E1EDF7;
+				}
+
+				/* When the radio button is checked, add a blue background */
+				.container input:checked ~ .checkmark {
+					background-color: $sheep_blue;
+				}
+
+				/* Create the indicator (the dot/circle - hidden when not checked) */
+				.checkmark:after {
+					content: "\2713";
+					position: absolute;
+					display: none;
+				}
+
+				/* Show the indicator (dot/circle) when checked */
+				.container input:checked ~ .checkmark:after {
+					display: block;
+				}
+
+				/* Style the indicator (dot/circle) */
+				.container .checkmark:after {
+					font-size: 14px;
+					font-weight: bold;
+					top: 0;
+					left: 5px;
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+/* === MOBILE SYLES === */
+
+.mobile-packages-slick{
+	.slick-slide{
+		outline: none !important;
+		a{
+			outline: none !important;
+		}
+	}
+	.slick-arrow{
+		display: none !important;
+	}
+	.slick-dots li.slick-active button:before {
+		content: "";
+		width: 10px;
+		height: 10px;
+		top: 5px;
+		left: 5px;
+		border-radius: 20px;
+		background: rgb(68,170,237);
+		background: -moz-linear-gradient(45deg, rgba(68,170,237,1) 0%, rgba(68,100,237,1) 100%);
+		background: -webkit-linear-gradient(45deg, rgba(68,170,237,1) 0%, rgba(68,100,237,1) 100%);
+		background: linear-gradient(45deg, rgba(68,170,237,1) 0%, rgba(68,100,237,1) 100%);
+	}
+	.slick-dots li button:before{
+		opacity: 1;
+		content: "";
+		width: 10px;
+		height: 10px;
+		top: 5px;
+		left: 5px;
+		border-radius: 20px;
+		background-color: #DAE7FC;
+	}
+}
+
+/* === MEDIA QUERIES === */
+@media only screen and (max-width:1510px) {
+	#profile{
+		width: 950px;
+	}
+	.profile-box{
+		&.becoming-seller{
+			.packages-wrapper{
+				width: 90%;
+			}
+			.notice-wrapper{
+				width: 90%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:965px) {
+	#profile{
+		width: 730px;
+	}
+	.profile-box{
+		&.becoming-seller{
+			.packages-wrapper{
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:750px) {
+	.mobile-hidden-750 {
+		display: none;
+	}
+	.desktop-hidden-750 {
+		display: block;
+	}
+	#profile{
+		width: 100%;
+	}
+	.profile-box{
+		width: 410px;
+		&.becoming-seller{
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+			box-shadow: none;
+			border-radius: 0;
+			.section-description{
+				width: 90%;
+			}
+			.steps{
+				width: 310px;
+				.top{
+					width: 272px;
+				}
+				.active-step, .inactive-step{
+					width: 30px;
+					height: 30px;
+					line-height: 30px;
+					font-size: 16px;
+				}
+				.first{
+					margin-right: 8px;
+				}
+				.second{
+					margin-left: 8px;
+					margin-right: 8px;
+				}
+				.third{
+					margin-left: 8px;
+				}
+				.inactive-dot, .active-dot{
+					margin-top: 12px;
+					margin-left: 5px;
+					margin-right: 5px;
+					width: 5px;
+					height: 5px;
+				}
+				.bottom-text{
+					font-size: 12px;
+					.left{
+						left: 2px;
+					}
+				}
+			}
+			.package-container{
+				width: 292px;
+				margin-right: 20px;
+				background: rgb(68,170,237);
+				background: -moz-linear-gradient(45deg, rgba(68,170,237,1) 0%, rgba(68,100,237,1) 100%);
+				background: -webkit-linear-gradient(45deg, rgba(68,170,237,1) 0%, rgba(68,100,237,1) 100%);
+				background: linear-gradient(45deg, rgba(68,170,237,1) 0%, rgba(68,100,237,1) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#44aaed",endColorstr="#4464ed",GradientType=1);
+				transition-duration:400ms;
+				-ms-transition-duration:400ms;
+				-webkit-transition-duration:400ms;
+				-o-transition-duration:400ms;
+				-moz-transition-duration:400ms;
+				h1, .package-description, .package-price, .package-benefit{
+					color: white;
+				}
+				h1{
+					margin-top: 30px;
+				}
+				.package-benefit{
+					span{
+						color: white;
+					}
+				}
+				.get-started-button{
+					color: $sheep_blue;
+					background-color: white;
+					margin-bottom: 30px;
+				}
+				transform:scale(0.8,0.8);
+				-ms-transform:scale(0.8,0.8); /* IE 9 */
+				-webkit-transform:scale(0.8,0.8); /* Safari and Chrome */
+				-o-transform:scale(0.8,0.8); /* Opera */
+				-moz-transform:scale(0.8,0.8); /* Firefox */
+				&.slick-current{
+					transform:scale(1.0,1.0);
+					-ms-transform:scale(1.0,1.0); /* IE 9 */
+					-webkit-transform:scale(1.0,1.0); /* Safari and Chrome */
+					-o-transform:scale(1.0,1.0); /* Opera */
+					-moz-transform:scale(1.0,1.0); /* Firefox */
+				}
+			}
+			.notice-wrapper{
+				padding-top: 40px;
+				width: 90%;
+				text-align: center;
+			}
+			.notice{
+				font-size: 10px;
+			}
+			.plan-box{
+				padding: 0;
+				margin: auto;
+				width: 90%;
+				.plan-left, .plan-right{
+					float: none;
+					clear: both;
+					margin-left: auto;
+					margin-right: auto;
+				}
+				.plan-left{
+					width: 240px;
+					margin-bottom: 30px;
+					h1{
+						text-align: center;
+					}
+				}
+				.plan-right{
+					width: 240px;
+					height: auto;
+				}
+				.plan-price{
+					position: static;
+					text-align: center;
+					margin-bottom: 30px;
+					span{
+						text-align: center;
+					}
+				}
+				.subscribe-button{
+					position: relative;
+					margin: auto;
+					margin-bottom: 20px;
+				}
+			}
+			.payment-method-container{
+				padding: 0;
+				width: 90%;
+				margin: auto;
+				margin-top: 30px;
+			}
+		}
+	}
+	.becoming-seller-banner{
+		border-radius: 0;
+		div{
+			width: 90%;
+			padding-left: 5%;
+			padding-right: 5%;
+		}
+	}
+}
+
+@media only screen and (max-width:460px) {
+	.profile-box{
+		&.becoming-seller{
+			form{
+				width: 90%;
+			}
+			.package-container {
+				width: 230px;
+				margin-right: 10px;
+				.get-started-button{
+					width: 150px;
+				}
+			}
+		}
+	}
+}

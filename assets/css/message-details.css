@@ -41,6 +41,9 @@ input {
 .desktop-hidden-630 {
   display: none; }
 
+image {
+  border: none; }
+
 footer {
   width: 100%;
   background-color: #464F55;
@@ -1117,12 +1120,20 @@ footer {
     color: #464855; }
     .profile-box.message-details .message-title-delete {
       width: 100%;
+      margin-bottom: 30px;
       height: 42px;
-      line-height: 42px;
-      margin-bottom: 30px; }
+      display: table;
+      table-layout: fixed; }
       .profile-box.message-details .message-title-delete h2 {
+        display: table-cell;
+        max-width: 100%;
+        vertical-align: middle;
         font-size: 18px;
-        float: left; }
+        overflow: auto; }
+      .profile-box.message-details .message-title-delete .delete-wrapper {
+        display: table-cell;
+        width: 100px;
+        height: 40px; }
       .profile-box.message-details .message-title-delete .delete-button {
         float: right;
         background-color: white;
@@ -1352,9 +1363,16 @@ footer {
     border-radius: 0;
     overflow: hidden; }
     .profile-box.message-details .message-title-delete {
-      padding-left: 10px; }
+      width: 90%;
+      padding-left: 5%;
+      padding-right: 5%; }
       .profile-box.message-details .message-title-delete h2 {
         font-size: 16px; }
+      .profile-box.message-details .message-title-delete .delete-wrapper {
+        width: 80px; }
+      .profile-box.message-details .message-title-delete .delete-button {
+        width: 70px;
+        font-size: 14px; }
     .profile-box.message-details .chat .chat-message {
       width: 90%;
       margin: auto;

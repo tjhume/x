@@ -41,6 +41,9 @@ input {
 .desktop-hidden-630 {
   display: none; }
 
+image {
+  border: none; }
+
 footer {
   width: 100%;
   background-color: #464F55;
@@ -1135,19 +1138,27 @@ footer {
         left: 0;
         width: 100%;
         height: 100%; }
+  .profile-box.my-addresses .address-row > div:nth-child(1) {
+    float: left; }
+  .profile-box.my-addresses .address-row > div:nth-child(2) {
+    float: right; }
   .profile-box.my-addresses .address-box {
     padding: 15px;
     width: 500px;
     border: 1px solid #D5D5D8;
     border-radius: 6px;
-    margin-top: 15px;
-    float: left; }
+    margin-top: 15px; }
     .profile-box.my-addresses .address-box .address-header {
       overflow: auto;
-      margin-bottom: 15px; }
+      position: relative; }
+      .profile-box.my-addresses .address-box .address-header .name-type-wrapper {
+        max-width: 80%;
+        overflow: auto; }
       .profile-box.my-addresses .address-box .address-header h2 {
         float: left;
-        margin-right: 8px; }
+        margin-right: 8px;
+        max-width: 100%;
+        margin-bottom: 10px; }
       .profile-box.my-addresses .address-box .address-header .address-type {
         float: left;
         position: relative;
@@ -1159,7 +1170,7 @@ footer {
         line-height: 18px;
         width: 130px;
         background-color: rgba(61, 167, 237, 0.05);
-        margin-top: 2px; }
+        margin-bottom: 15px; }
         .profile-box.my-addresses .address-box .address-header .address-type a {
           position: absolute;
           top: 0;
@@ -1168,8 +1179,9 @@ footer {
           height: 100%; }
       .profile-box.my-addresses .address-box .address-header .address-edit-wrapper {
         overflow: auto;
-        float: right;
-        position: relative;
+        position: absolute;
+        top: 0;
+        right: 0;
         padding-top: 3px; }
         .profile-box.my-addresses .address-box .address-header .address-edit-wrapper a {
           position: absolute;
@@ -1195,7 +1207,8 @@ footer {
       font-size: 14px;
       font-weight: 500;
       margin-bottom: 0;
-      margin-top: 0; }
+      margin-top: 0;
+      overflow: auto; }
       .profile-box.my-addresses .address-box p:nth-last-child(1) {
         margin-top: 5px; }
   .profile-box.my-addresses .add-new-address {
@@ -1209,7 +1222,6 @@ footer {
     font-weight: 600;
     background-color: rgba(246, 247, 247, 0.5);
     border: 1px dashed #D5D5D8;
-    float: right;
     position: relative; }
     .profile-box.my-addresses .add-new-address a {
       position: absolute;
@@ -1299,9 +1311,13 @@ footer {
     width: 450px; }
   .profile-box {
     width: 410px; }
-    .profile-box.my-addresses .address-box, .profile-box.my-addresses .add-new-address {
+    .profile-box.my-addresses .address-row > div:nth-child(1) {
       float: none;
-      clear: both;
+      clear: both; }
+    .profile-box.my-addresses .address-row > div:nth-child(2) {
+      float: none;
+      clear: both; }
+    .profile-box.my-addresses .address-box, .profile-box.my-addresses .add-new-address {
       margin-left: auto;
       margin-right: auto;
       width: 350px; } }
@@ -1309,6 +1325,8 @@ footer {
 @media only screen and (max-width: 460px) {
   .profile-right {
     width: 310px; }
+  .profile-options-slick .slick-list {
+    margin-left: 0; }
   .profile-box {
     padding: 10px;
     width: 290px; }
@@ -1326,4 +1344,6 @@ footer {
       overflow: hidden;
       width: 260px;
       margin-left: 0;
-      margin-right: 0; } }
+      margin-right: 0; }
+    .profile-box.my-addresses .address-box p {
+      font-size: 12px; } }
