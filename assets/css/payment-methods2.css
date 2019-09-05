@@ -1093,7 +1093,7 @@ footer {
       float: left;
       width: 45%;
       padding-left: 3%;
-      overflow: auto; }
+      overflow: hidden; }
       .profile-box.payment-methods2 .payment-left span {
         float: left;
         margin-right: 20px;
